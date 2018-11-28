@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>randomize();
+            <string>//test commit
+
+randomize();
 
 control = instance_find(controller,0);
 if control == noone
