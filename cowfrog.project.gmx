@@ -5,10 +5,28 @@
   </Configs>
   <datafiles number="1" name="datafiles"/>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\rustyTheme</sound>
+  </sounds>
   <sprites name="sprites">
-    <sprite>sprites\boom</sprite>
     <sprite>sprites\bulletFired</sprite>
+    <sprite>sprites\boom</sprite>
+    <sprites name="doki">
+      <sprite>sprites\dokiDed</sprite>
+      <sprite>sprites\dokiGunF</sprite>
+      <sprite>sprites\dokiGunT</sprite>
+      <sprite>sprites\dokiToss</sprite>
+      <sprite>sprites\dokiProfile</sprite>
+      <sprite>sprites\dokiGunD</sprite>
+    </sprites>
+    <sprites name="flat">
+      <sprite>sprites\flatProfile</sprite>
+      <sprite>sprites\flatDed</sprite>
+      <sprite>sprites\flatGunF</sprite>
+      <sprite>sprites\flatGunT</sprite>
+      <sprite>sprites\flatToss</sprite>
+      <sprite>sprites\flatGunD</sprite>
+    </sprites>
     <sprites name="cowboy1">
       <sprite>sprites\cowboy1</sprite>
       <sprite>sprites\cowboy1GunD</sprite>
@@ -48,6 +66,14 @@
       <sprite>sprites\fuyukoProfile</sprite>
       <sprite>sprites\fuyukoGunT</sprite>
       <sprite>sprites\fuyukoDed</sprite>
+    </sprites>
+    <sprites name="suu">
+      <sprite>sprites\suuDed</sprite>
+      <sprite>sprites\suuGunD</sprite>
+      <sprite>sprites\suuGunF</sprite>
+      <sprite>sprites\suuGunT</sprite>
+      <sprite>sprites\suuToss</sprite>
+      <sprite>sprites\suuProfile</sprite>
     </sprites>
     <sprite>sprites\dynomite</sprite>
     <sprite>sprites\enemyBullet</sprite>

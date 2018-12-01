@@ -95,6 +95,24 @@ quote = "Anata wa kono gemu de hidoidesu. :(!"
 sprite = fuyukoProfile
 color = make_color_rgb(255,105,180)
 break;
+case 6:
+name = "Sans Undertale"
+quote = "ehehehehehehehehehehe"
+sprite = suuProfile
+color = make_color_rgb($47,$82,$c9)
+break;
+case 7:
+name = "Flat Bartender"
+quote = "Time to mix drinks and change lives"
+sprite = flatProfile
+color = make_color_rgb(106,3,217)
+break;
+case 8:
+name = "Doki"
+quote = "rootin' tootin' vladmir putin"
+sprite = dokiProfile
+color = make_color_rgb(192,237,202)
+break;
 }
 
 draw_text_ext(view_xview[0]+120,view_yview[0]+16,name+" has collected your $"+

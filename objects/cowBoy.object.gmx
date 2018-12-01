@@ -37,7 +37,7 @@ down = 0
 forward =0;
 throw =0;
 toss = 0;
-choice = irandom_range(1,5)
+choice = irandom_range(1,8)
 switch(choice)
 {
     case 1:
@@ -71,7 +71,7 @@ switch(choice)
         forward =ridaGunF;
         throw =ridaGunT;
         toss = ridaToss;
-    break
+    break;
     case 5:
         sprite_index = fuyukoProfile
         dead = fuyukoDed
@@ -79,7 +79,31 @@ switch(choice)
         forward =fuyukoGunF;
         throw =fuyukoGunT;
         toss = fuyukoToss;
-    break
+    break;
+    case 6:
+        sprite_index = suuProfile
+        dead = suuDed
+        down = suuGunD
+        forward =suuGunF;
+        throw =suuGunT;
+        toss = suuToss;
+    break;
+    case 7:
+        sprite_index = flatProfile
+        dead = flatDed
+        down = flatGunD
+        forward =flatGunF;
+        throw =flatGunT;
+        toss = flatToss;
+    break;
+    case 8:
+        sprite_index = dokiProfile
+        dead = dokiDed
+        down = dokiGunD
+        forward =dokiGunF;
+        throw =dokiGunT;
+        toss = dokiToss;
+    break;
 
 }
 xVelo = 0;
