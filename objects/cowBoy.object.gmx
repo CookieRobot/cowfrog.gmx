@@ -29,7 +29,7 @@
 depth = -100;
 //sprites
 grav = .35;
-
+collisionsIni()
 
 
 dead = 0;
@@ -154,20 +154,6 @@ bulletVelo = 1.5 +(global.town*.2);
             <kind>1</kind>
             <string>
 
-
-//set directipn to face
-grounded = place_meeting(x,y+1,objSolid)
-if place_meeting(x,y+yVelo,objSolid)
-{
-    yVelo = 0;
-    while !place_meeting(x,y+1,objSolid)
-    {
-        y+=1;
-    }
-}
-
-x+=xVelo
-y+=yVelo
 //gravity 
 //air 
 if (!grounded)
@@ -180,10 +166,11 @@ if (ded!=0)
 {
     sprite_index = dead;
     xVelo = ded
-    
-    if place_meeting(x,y+4,objSolid)
+    if (grounded)
     {
-    xVelo = 0
+    xVelo = 0;
+    }
+    
         if ded &lt;0 
         {
             image_angle = 90
@@ -193,8 +180,7 @@ if (ded!=0)
             image_angle = 270
         }
    
-    }
-    x+=xVelo
+    
 }
 else
 {
@@ -204,6 +190,7 @@ else
     image_xscale = facing;
     }
 }
+collisionsStep();
 //x bounds
 if x&lt;32
 {

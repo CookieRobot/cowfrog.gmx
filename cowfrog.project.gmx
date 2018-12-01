@@ -104,6 +104,13 @@
     <sprite>sprites\gunSmoke</sprite>
     <sprite>sprites\block</sprite>
     <sprite>sprites\cursorsprite</sprite>
+    <sprites name="barrel">
+      <sprite>sprites\barrelBrokenSprite</sprite>
+      <sprite>sprites\brokenBarrelCollision</sprite>
+      <sprite>sprites\brokenWood1</sprite>
+      <sprite>sprites\brokenWood2</sprite>
+      <sprite>sprites\spriteBarrel</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background</background>
@@ -117,6 +124,8 @@
     <script>scripts\size0House.gml</script>
     <script>scripts\size1House.gml</script>
     <script>scripts\gameOverMusic.gml</script>
+    <script>scripts\collisionsIni.gml</script>
+    <script>scripts\collisionsStep.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
@@ -145,6 +154,7 @@
     <object>objects\dynamite</object>
     <object>objects\explosion</object>
     <object>objects\scale</object>
+    <object>objects\barrel</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title</room>

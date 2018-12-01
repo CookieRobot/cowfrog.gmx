@@ -27,11 +27,16 @@
             <kind>1</kind>
             <string>play = noone;
 size = 0;
+
+//how to add enemies
+// put in a name of your enemy (not object name) here to store the number of spawns
+// then go to alarm 0 
 standBoys = 0;
 runBoys = 0;
 dynaBoys = 0;
 jumpBoys = 0;
 snipeBoys = 0;
+barrelCount = 0;
 
 jumpBoysSpawned = 0;
 
@@ -97,7 +102,11 @@ jumpBoysSpawned+=1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>//copy the while loops
+// you will need to increment the ground count if they spawn on the ground
+//or the window count if they spawn in a window
+//then decrement the variable you set in create
+//then go to user defined
 groundCount = 0;
 windowCount = 0;
 firstWindow = 0;
@@ -122,7 +131,12 @@ while runBoys&gt;0
     groundCount+=1;
     runBoys-=1;
 }
-
+while barrelCount&gt;0
+{
+    instance_create(x+groundCount *40,136,barrel);
+    groundCount+=1;
+    barrelCount-=1;
+}
 while dynaBoys&gt;0
 {
     instance_create(x+firstWindow+windowCount *48,58,dynaBoy);
@@ -176,7 +190,9 @@ while snipeBoys&gt;0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//print("generate triggers ");
+            <string>//scroll down and read the capslock comments
+
+//print("generate triggers ");
 //generate cowboys
 maxCowboys = 0;
 maxWindowboys = 0;
@@ -210,6 +226,8 @@ print(cowboyCount)
 while cowboyCount&gt;0
 {
     cowboyCount -=1;
+    //1 = window spawn
+    //0 = ground spawn
     chooseLocation = irandom_range(0,1)
     
         if chooseLocation ==0&amp;&amp; maxCowboys &gt;0
@@ -233,6 +251,7 @@ while cowboyCount&gt;0
         
     if (chooseLocation == 1)
     {
+        //IF THEY SPAWN IN A WINDOW ADD ANOTHER CASE HEREAND INCREMENT THE ENEMY COUNT AND INCREASE THE RANDOM RANGE
         chooseBoy = irandom_range(0,2)
         switch(chooseBoy)
         {
@@ -258,7 +277,8 @@ while cowboyCount&gt;0
     }
     else
     {
-        chooseBoy = irandom_range(0,1)
+        //IF THEY SPAWN ON THE GROUND ADD ANOTHER CASE HERE AND INCREMENT THE ENEMY COUNT AND INCREASE THE RANDOM RANGE
+        chooseBoy = irandom_range(0,2)
         switch(chooseBoy)
         {
            case 0: //standboy
@@ -271,6 +291,12 @@ while cowboyCount&gt;0
         
                 
                     runBoys+=1;
+            
+            break;    
+            case 2:
+        
+                
+                    barrelCount+=1;
             
             break;    
         }

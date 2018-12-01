@@ -31,6 +31,7 @@ yVelo = 0;
 depth=-1000;
 grav = .35;
 alarm[0] = room_speed *3
+collisionsIni();
 </string>
           </argument>
         </arguments>
@@ -79,19 +80,12 @@ instance_destroy(self);
           <argument>
             <kind>1</kind>
             <string>
-if place_meeting(x,y+yVelo,objSolid)
-{
-    yVelo = 0;
-    xVelo = 0;
-    while !place_meeting(x,y+1,objSolid)
-    {
-        y+=1;
-    }
-}
-
-x+=xVelo;
-y+=yVelo;
 yVelo+=grav;
+if (grounded)
+{
+xVelo = 0;
+}
+collisionsStep();
 </string>
           </argument>
         </arguments>
