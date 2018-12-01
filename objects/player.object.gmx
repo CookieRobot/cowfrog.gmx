@@ -163,7 +163,7 @@ alarm[0] =-1
 
 //input booleans
 inputBooleans();
-
+stun = false;
 
 
 //used for checking single presses
@@ -171,6 +171,29 @@ lastFire = false;
 lastJump = false;
 
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>stun = false;
 </string>
           </argument>
         </arguments>
@@ -221,33 +244,47 @@ s.music = gameOverMusic(s.choice)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>if (stun)
+{
+pressLeft = false;
+pressRight = false;
+pressUp = false;
+pressDown = false
+pressJump = false;
+pressFire = false;
+//pressPause = false;
+pressFireChange = false;
+pressJumpChange = false;
+pressLeftChange = false;
+pressRightChange = false;
+}
 
 xMove = (-pressLeft + pressRight);
 
 // caps playermovement but allows player to move faster if possible
-
-if (grounded&amp;&amp;abs(xVelo)&lt;maxXvelo)
+if (!stun)
 {
-xVelo += xMove*.6*canInputPlay;
-    if (abs(xVelo)&gt;maxXvelo)
+    if (grounded&amp;&amp;abs(xVelo)&lt;maxXvelo)
     {
-        xVelo = maxXvelo*sign(xVelo);
+    xVelo += xMove*.6*canInputPlay;
+        if (abs(xVelo)&gt;maxXvelo)
+        {
+            xVelo = maxXvelo*sign(xVelo);
+        }
+    }
+    if (!grounded&amp;&amp;abs(xVelo)&lt;maxXvelo)
+    {
+    xVelo += xMove*.6*canInputPlay;
+        if (abs(xVelo)&gt;maxXvelo)
+        {
+            xVelo = (maxXvelo)*sign(xVelo);
+        }
+    }
+    if(sign(xMove)!=sign(xVelo))// if player is moving in opposite direction they can move anyway
+    {
+    xVelo += xMove*.6*canInputPlay;
     }
 }
-if (!grounded&amp;&amp;abs(xVelo)&lt;maxXvelo)
-{
-xVelo += xMove*.6*canInputPlay;
-    if (abs(xVelo)&gt;maxXvelo)
-    {
-        xVelo = (maxXvelo)*sign(xVelo);
-    }
-}
-if(sign(xMove)!=sign(xVelo))// if player is moving in opposite direction they can move anyway
-{
-xVelo += xMove*.6*canInputPlay;
-}
-
 
 grounded =  place_meeting(x,y+1,objSolid);
 
@@ -361,7 +398,7 @@ yVelo = 7;
 
 
 //friction slowDown
-if xMove==0&amp;&amp;abs(xVelo)!=0 //&amp;&amp; grounded)
+if xMove==0&amp;&amp;abs(xVelo)!=0&amp;&amp;!stun //&amp;&amp; grounded)
 {
     if ( abs(xVelo)-.325&lt;0  ) //prevents slowing down to opposite speed
     {
