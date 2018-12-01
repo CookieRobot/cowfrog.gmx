@@ -30,6 +30,7 @@
 global.bounty = 10000;
 global.town = 1;
 choice = 1;
+music = noone;
 inputBooleans();
 draw_set_font(font1);
 </string>
@@ -113,6 +114,12 @@ quote = "rootin' tootin' vladmir putin"
 sprite = dokiProfile
 color = make_color_rgb(192,237,202)
 break;
+case 9:
+name = "YomiBandit"
+quote = "Heh... Nothing personnel kiddo...!"
+sprite = yomicProfile
+color = make_color_rgb($33,$99,$FF)
+break;
 }
 
 draw_text_ext(view_xview[0]+120,view_yview[0]+16,name+" has collected your $"+
@@ -138,6 +145,12 @@ room_goto(game);
 global.bounty = 10000;
 global.town = 1; 
 inputBooleans();
+
+if (music!=noone)
+{
+audio_stop_sound(music);
+}
+
 }
 </string>
           </argument>
