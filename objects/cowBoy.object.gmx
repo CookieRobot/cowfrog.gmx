@@ -119,7 +119,7 @@ yVelo = 0;
 ded = 0;
 facing = -1;
 play = instance_find(player,0);
-
+grounded = true;
 //shooting
 //play = instance_find(player,0);
 nextShot = (room_speed*3)-(global.town);
@@ -156,7 +156,7 @@ bulletVelo = 1.5 +(global.town*.2);
 
 
 //set directipn to face
-
+grounded = place_meeting(x,y+1,objSolid)
 if place_meeting(x,y+yVelo,objSolid)
 {
     yVelo = 0;
@@ -170,7 +170,7 @@ x+=xVelo
 y+=yVelo
 //gravity 
 //air 
-if (yVelo!=0)
+if (!grounded)
 {
     image_index = 1;
 }
