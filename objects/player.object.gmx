@@ -198,6 +198,7 @@ room_goto(gameOver);
 draw_set_colour(c_white);
 s.over = true;
 control.target = s; 
+s.music = gameOverMusic(s.choice)
 </string>
           </argument>
         </arguments>

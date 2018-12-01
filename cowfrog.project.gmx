@@ -75,6 +75,14 @@
       <sprite>sprites\suuToss</sprite>
       <sprite>sprites\suuProfile</sprite>
     </sprites>
+    <sprites name="yomic">
+      <sprite>sprites\yomicDed</sprite>
+      <sprite>sprites\yomicGunD</sprite>
+      <sprite>sprites\yomicGunF</sprite>
+      <sprite>sprites\yomicGunT</sprite>
+      <sprite>sprites\yomicToss</sprite>
+      <sprite>sprites\yomicProfile</sprite>
+    </sprites>
     <sprite>sprites\dynomite</sprite>
     <sprite>sprites\enemyBullet</sprite>
     <sprite>sprites\frogded</sprite>
@@ -108,6 +116,7 @@
     <script>scripts\randomHouse.gml</script>
     <script>scripts\size0House.gml</script>
     <script>scripts\size1House.gml</script>
+    <script>scripts\gameOverMusic.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>

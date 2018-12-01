@@ -37,7 +37,7 @@ down = 0
 forward =0;
 throw =0;
 toss = 0;
-choice = irandom_range(1,8)
+choice = irandom_range(1,9)
 switch(choice)
 {
     case 1:
@@ -104,6 +104,14 @@ switch(choice)
         throw =dokiGunT;
         toss = dokiToss;
     break;
+    case 9:
+        sprite_index = yomicProfile
+        dead = yomicDed
+        down = yomicGunD
+        forward =yomicGunF;
+        throw =yomicGunT;
+        toss = yomicToss;
+    break;
 
 }
 xVelo = 0;
@@ -161,6 +169,11 @@ if place_meeting(x,y+yVelo,objSolid)
 x+=xVelo
 y+=yVelo
 //gravity 
+//air 
+if (yVelo!=0)
+{
+    image_index = 1;
+}
 yVelo+=grav;
 
 if (ded!=0)
