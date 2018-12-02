@@ -37,6 +37,7 @@ dynaBoys = 0;
 jumpBoys = 0;
 snipeBoys = 0;
 barrelCount = 0;
+bigYomicCount= 0;
 
 jumpBoysSpawned = 0;
 
@@ -136,6 +137,12 @@ while barrelCount&gt;0
     instance_create(x+groundCount *40,136,barrel);
     groundCount+=1;
     barrelCount-=1;
+}
+while bigYomicCount&gt;0
+{
+    instance_create(x+groundCount *40,136,bigYomic);
+    groundCount+=1;
+    bigYomicCount-=1;
 }
 while dynaBoys&gt;0
 {
@@ -278,7 +285,7 @@ while cowboyCount&gt;0
     else
     {
         //IF THEY SPAWN ON THE GROUND ADD ANOTHER CASE HERE AND INCREMENT THE ENEMY COUNT AND INCREASE THE RANDOM RANGE
-        chooseBoy = irandom_range(0,2)
+        chooseBoy = irandom_range(0,3)
         switch(chooseBoy)
         {
            case 0: //standboy
@@ -297,6 +304,12 @@ while cowboyCount&gt;0
         
                 
                     barrelCount+=1;
+            
+            break; 
+            case 3:
+        
+                
+                    bigYomicCount+=1;
             
             break;    
         }

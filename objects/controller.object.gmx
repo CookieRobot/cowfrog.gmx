@@ -127,6 +127,36 @@ part_type_direction(global.woodChunk2,45,135,0,0);            //The direction
 //part_type_orientation(global.Particle1,0,0,0,0,1);           //This changes the rotation of the particle
 //part_type_blend(global.Particle1,1);                         //This is the blend mode, either additive or normal
 part_type_life(global.woodChunk2,90,90);                       //this is its lifespan in steps
+
+global.bloodBlueSystem=part_system_create();
+global.bloodBlue=part_type_create();
+part_type_shape(global.bloodBlue,pt_shape_pixel);            //This defines the particles shape
+//part_type_sprite(global.smoke,gunSmoke,1,0,0)
+part_type_size(global.bloodBlue,.5,.5,0,0);                    //This is for the size
+//part_type_scale(global.Particle1,1,1);                       //This is for scaling
+part_type_color1(global.bloodBlue,c_blue);                  //This sets its colour. There are three different codes for this
+part_type_gravity(global.bloodBlue,.35,270)
+//part_type_alpha1(global.Particle1,1);                        //This is its alpha. There are three different codes for this
+part_type_speed(global.bloodBlue,4,7,-0,0);            //The particles speed
+part_type_direction(global.bloodBlue,45,135,0,0);            //The direction
+//part_type_orientation(global.Particle1,0,0,0,0,1);           //This changes the rotation of the particle
+//part_type_blend(global.Particle1,1);                         //This is the blend mode, either additive or normal
+part_type_life(global.bloodBlue,90,90);
+
+global.bloodBlueBigSystem=part_system_create();
+global.bloodBlueBig=part_type_create();
+part_type_shape(global.bloodBlueBig,pt_shape_pixel);            //This defines the particles shape
+//part_type_sprite(global.smoke,gunSmoke,1,0,0)
+part_type_size(global.bloodBlueBig,.5,5,0,2);                    //This is for the size
+//part_type_scale(global.Particle1,1,1);                       //This is for scaling
+part_type_color1(global.bloodBlueBig,c_blue);                  //This sets its colour. There are three different codes for this
+part_type_gravity(global.bloodBlueBig,.35,270)
+//part_type_alpha1(global.Particle1,1);                        //This is its alpha. There are three different codes for this
+part_type_speed(global.bloodBlueBig,4,7,-0,0);            //The particles speed
+part_type_direction(global.bloodBlueBig,45,135,0,0);            //The direction
+//part_type_orientation(global.Particle1,0,0,0,0,1);           //This changes the rotation of the particle
+//part_type_blend(global.Particle1,1);                         //This is the blend mode, either additive or normal
+part_type_life(global.bloodBlueBig,90,90);
 </string>
           </argument>
         </arguments>

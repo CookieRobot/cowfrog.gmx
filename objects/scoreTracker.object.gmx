@@ -65,6 +65,8 @@ color = c_white
 switch(choice)
 {
 
+
+
 case 1:
 name = "Mark"
 quote = "Looks like you were a little too slow pardner!"
@@ -120,6 +122,12 @@ quote = "Heh... Nothing personnel kiddo...!"
 sprite = yomicProfile
 color = make_color_rgb($33,$99,$FF)
 break;
+
+case 10:
+name = "BIG Yomic"
+quote = "Looks like you were a little too slow pardner!"
+sprite = yomicIdle
+color = make_color_rgb($33,$99,$FF)
 }
 
 draw_text_ext(view_xview[0]+120,view_yview[0]+16,name+" has collected your $"+

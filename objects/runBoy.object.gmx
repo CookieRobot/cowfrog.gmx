@@ -59,7 +59,7 @@ alarm[1] = nextRun;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if ded!=0
+            <string>if ded!=0||x&lt;view_xview[0]+64//so they dont shoot off screen from the left
 {
 exit;
 }
