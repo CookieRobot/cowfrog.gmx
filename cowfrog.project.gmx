@@ -111,6 +111,11 @@
       <sprite>sprites\brokenWood2</sprite>
       <sprite>sprites\spriteBarrel</sprite>
     </sprites>
+    <sprites name="bigYomic">
+      <sprite>sprites\yomicJump</sprite>
+      <sprite>sprites\yomicLand</sprite>
+      <sprite>sprites\yomicIdle</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background</background>
@@ -150,11 +155,12 @@
     <object>objects\houseTrigger</object>
     <object>objects\scoreTracker</object>
     <object>objects\titleCursor</object>
-    <object>objects\enemyshoot</object>
     <object>objects\dynamite</object>
+    <object>objects\enemyshoot</object>
     <object>objects\explosion</object>
     <object>objects\scale</object>
     <object>objects\barrel</object>
+    <object>objects\bigYomic</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title</room>
