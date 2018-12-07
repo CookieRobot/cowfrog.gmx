@@ -34,7 +34,7 @@ hp = 15;
 collisionsIni();
 facing = 1
 play = instance_find(player,0);
-choice = 10
+choice = 1000
 </string>
           </argument>
         </arguments>

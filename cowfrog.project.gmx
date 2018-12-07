@@ -9,99 +9,120 @@
     <sound>sound\rustyTheme</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\bulletFired</sprite>
-    <sprite>sprites\boom</sprite>
-    <sprites name="doki">
-      <sprite>sprites\dokiDed</sprite>
-      <sprite>sprites\dokiGunF</sprite>
-      <sprite>sprites\dokiGunT</sprite>
-      <sprite>sprites\dokiToss</sprite>
-      <sprite>sprites\dokiProfile</sprite>
-      <sprite>sprites\dokiGunD</sprite>
+    <sprites name="cowboys">
+      <sprites name="cowboy1">
+        <sprite>sprites\cowboy1</sprite>
+        <sprite>sprites\cowboy1GunD</sprite>
+        <sprite>sprites\cowboy1ded</sprite>
+        <sprite>sprites\cowboy1GunF</sprite>
+        <sprite>sprites\cowboy1GunT</sprite>
+        <sprite>sprites\cowboy1Toss</sprite>
+      </sprites>
+      <sprites name="doki">
+        <sprite>sprites\dokiDed</sprite>
+        <sprite>sprites\dokiGunF</sprite>
+        <sprite>sprites\dokiGunT</sprite>
+        <sprite>sprites\dokiToss</sprite>
+        <sprite>sprites\dokiProfile</sprite>
+        <sprite>sprites\dokiGunD</sprite>
+      </sprites>
+      <sprites name="flat">
+        <sprite>sprites\flatProfile</sprite>
+        <sprite>sprites\flatDed</sprite>
+        <sprite>sprites\flatGunF</sprite>
+        <sprite>sprites\flatGunT</sprite>
+        <sprite>sprites\flatToss</sprite>
+        <sprite>sprites\flatGunD</sprite>
+      </sprites>
+      <sprites name="cowboy2">
+        <sprite>sprites\cowboy2GunT</sprite>
+        <sprite>sprites\cowboy2GunF</sprite>
+        <sprite>sprites\cowboy2GunD</sprite>
+        <sprite>sprites\cowboy2ded</sprite>
+        <sprite>sprites\cowboy2</sprite>
+        <sprite>sprites\cowboy2Toss</sprite>
+      </sprites>
+      <sprites name="yomic">
+        <sprite>sprites\yomicDed</sprite>
+        <sprite>sprites\yomicGunD</sprite>
+        <sprite>sprites\yomicGunF</sprite>
+        <sprite>sprites\yomicGunT</sprite>
+        <sprite>sprites\yomicToss</sprite>
+        <sprite>sprites\yomicProfile</sprite>
+      </sprites>
+      <sprites name="suu">
+        <sprite>sprites\suuDed</sprite>
+        <sprite>sprites\suuGunD</sprite>
+        <sprite>sprites\suuGunF</sprite>
+        <sprite>sprites\suuGunT</sprite>
+        <sprite>sprites\suuToss</sprite>
+        <sprite>sprites\suuProfile</sprite>
+      </sprites>
+      <sprites name="Fuyuko">
+        <sprite>sprites\fuyukoGunD</sprite>
+        <sprite>sprites\fuyukoGunF</sprite>
+        <sprite>sprites\fuyukoToss</sprite>
+        <sprite>sprites\fuyukoProfile</sprite>
+        <sprite>sprites\fuyukoGunT</sprite>
+        <sprite>sprites\fuyukoDed</sprite>
+      </sprites>
+      <sprites name="rida">
+        <sprite>sprites\ridaGunD</sprite>
+        <sprite>sprites\ridaGunF</sprite>
+        <sprite>sprites\ridaToss</sprite>
+        <sprite>sprites\ridaProfile</sprite>
+        <sprite>sprites\ridaGunT</sprite>
+        <sprite>sprites\ridaDed</sprite>
+      </sprites>
+      <sprites name="cowboy3">
+        <sprite>sprites\cowboy3ded</sprite>
+        <sprite>sprites\cowboy3GunD</sprite>
+        <sprite>sprites\cowboy3GunF</sprite>
+        <sprite>sprites\cowboy3GunT</sprite>
+        <sprite>sprites\cowboy3</sprite>
+        <sprite>sprites\cowboy3Toss</sprite>
+      </sprites>
+      <sprites name="hikagi">
+        <sprite>sprites\hikagiGunF</sprite>
+        <sprite>sprites\hikagiGunT</sprite>
+        <sprite>sprites\hikagiToss</sprite>
+        <sprite>sprites\hikagiProfile</sprite>
+        <sprite>sprites\hikagiDed</sprite>
+        <sprite>sprites\hikagiGunD</sprite>
+      </sprites>
+      <sprites name="usalion">
+        <sprite>sprites\cowboyHaroDed</sprite>
+        <sprite>sprites\cowboyHaroGunD</sprite>
+        <sprite>sprites\cowboyHaroGunF</sprite>
+        <sprite>sprites\cowboyHaroGunT</sprite>
+        <sprite>sprites\cowboyHaroToss</sprite>
+        <sprite>sprites\cowboyHaroProfile</sprite>
+      </sprites>
+      <sprites name="rdein">
+        <sprite>sprites\rdeinDed</sprite>
+        <sprite>sprites\rdeinGunD</sprite>
+        <sprite>sprites\rdeinGunF</sprite>
+        <sprite>sprites\rdeinGunT</sprite>
+        <sprite>sprites\rdeinProfile</sprite>
+        <sprite>sprites\rdeinToss</sprite>
+      </sprites>
+      <sprites name="luca">
+        <sprite>sprites\lucaboyDed</sprite>
+        <sprite>sprites\lucaboyGunD</sprite>
+        <sprite>sprites\lucaboyGunF</sprite>
+        <sprite>sprites\lucaboyGunT</sprite>
+        <sprite>sprites\lucaboyToss</sprite>
+        <sprite>sprites\lucaboyProfile</sprite>
+      </sprites>
+      <sprites name="alice">
+        <sprite>sprites\aliceGunD</sprite>
+        <sprite>sprites\aliceGunF</sprite>
+        <sprite>sprites\aliceGunT</sprite>
+        <sprite>sprites\aliceProfile</sprite>
+        <sprite>sprites\aliceToss</sprite>
+        <sprite>sprites\aliceDed</sprite>
+      </sprites>
     </sprites>
-    <sprites name="flat">
-      <sprite>sprites\flatProfile</sprite>
-      <sprite>sprites\flatDed</sprite>
-      <sprite>sprites\flatGunF</sprite>
-      <sprite>sprites\flatGunT</sprite>
-      <sprite>sprites\flatToss</sprite>
-      <sprite>sprites\flatGunD</sprite>
-    </sprites>
-    <sprites name="cowboy1">
-      <sprite>sprites\cowboy1</sprite>
-      <sprite>sprites\cowboy1GunD</sprite>
-      <sprite>sprites\cowboy1ded</sprite>
-      <sprite>sprites\cowboy1GunF</sprite>
-      <sprite>sprites\cowboy1GunT</sprite>
-      <sprite>sprites\cowboy1Toss</sprite>
-    </sprites>
-    <sprites name="cowboy2">
-      <sprite>sprites\cowboy2GunT</sprite>
-      <sprite>sprites\cowboy2GunF</sprite>
-      <sprite>sprites\cowboy2GunD</sprite>
-      <sprite>sprites\cowboy2ded</sprite>
-      <sprite>sprites\cowboy2</sprite>
-      <sprite>sprites\cowboy2Toss</sprite>
-    </sprites>
-    <sprites name="cowboy3">
-      <sprite>sprites\cowboy3ded</sprite>
-      <sprite>sprites\cowboy3GunD</sprite>
-      <sprite>sprites\cowboy3GunF</sprite>
-      <sprite>sprites\cowboy3GunT</sprite>
-      <sprite>sprites\cowboy3</sprite>
-      <sprite>sprites\cowboy3Toss</sprite>
-    </sprites>
-    <sprites name="rida">
-      <sprite>sprites\ridaGunD</sprite>
-      <sprite>sprites\ridaGunF</sprite>
-      <sprite>sprites\ridaToss</sprite>
-      <sprite>sprites\ridaProfile</sprite>
-      <sprite>sprites\ridaGunT</sprite>
-      <sprite>sprites\ridaDed</sprite>
-    </sprites>
-    <sprites name="Fuyuko">
-      <sprite>sprites\fuyukoGunD</sprite>
-      <sprite>sprites\fuyukoGunF</sprite>
-      <sprite>sprites\fuyukoToss</sprite>
-      <sprite>sprites\fuyukoProfile</sprite>
-      <sprite>sprites\fuyukoGunT</sprite>
-      <sprite>sprites\fuyukoDed</sprite>
-    </sprites>
-    <sprites name="suu">
-      <sprite>sprites\suuDed</sprite>
-      <sprite>sprites\suuGunD</sprite>
-      <sprite>sprites\suuGunF</sprite>
-      <sprite>sprites\suuGunT</sprite>
-      <sprite>sprites\suuToss</sprite>
-      <sprite>sprites\suuProfile</sprite>
-    </sprites>
-    <sprites name="yomic">
-      <sprite>sprites\yomicDed</sprite>
-      <sprite>sprites\yomicGunD</sprite>
-      <sprite>sprites\yomicGunF</sprite>
-      <sprite>sprites\yomicGunT</sprite>
-      <sprite>sprites\yomicToss</sprite>
-      <sprite>sprites\yomicProfile</sprite>
-    </sprites>
-    <sprite>sprites\dynomite</sprite>
-    <sprite>sprites\enemyBullet</sprite>
-    <sprite>sprites\frogded</sprite>
-    <sprite>sprites\frogGun</sprite>
-    <sprite>sprites\frogGunD</sprite>
-    <sprite>sprites\frogGunF</sprite>
-    <sprite>sprites\frogGunFJ</sprite>
-    <sprite>sprites\frogGunU</sprite>
-    <sprite>sprites\house1</sprite>
-    <sprite>sprites\house2</sprite>
-    <sprite>sprites\house3</sprite>
-    <sprite>sprites\wideHouse1</sprite>
-    <sprite>sprites\wideHouse2</sprite>
-    <sprite>sprites\wideHouse3</sprite>
-    <sprite>sprites\frogGunUJ</sprite>
-    <sprite>sprites\frogNe</sprite>
-    <sprite>sprites\gun</sprite>
-    <sprite>sprites\playerBullet</sprite>
-    <sprite>sprites\gunSmoke</sprite>
     <sprite>sprites\block</sprite>
     <sprite>sprites\cursorsprite</sprite>
     <sprites name="barrel">
@@ -115,6 +136,33 @@
       <sprite>sprites\yomicJump</sprite>
       <sprite>sprites\yomicLand</sprite>
       <sprite>sprites\yomicIdle</sprite>
+    </sprites>
+    <sprites name="frog">
+      <sprite>sprites\frogded</sprite>
+      <sprite>sprites\frogGunUJ</sprite>
+      <sprite>sprites\frogGunD</sprite>
+      <sprite>sprites\frogNe</sprite>
+      <sprite>sprites\frogGun</sprite>
+      <sprite>sprites\frogGunFJ</sprite>
+      <sprite>sprites\frogGunF</sprite>
+      <sprite>sprites\frogGunU</sprite>
+    </sprites>
+    <sprites name="houses">
+      <sprite>sprites\house1</sprite>
+      <sprite>sprites\house2</sprite>
+      <sprite>sprites\house3</sprite>
+      <sprite>sprites\wideHouse1</sprite>
+      <sprite>sprites\wideHouse2</sprite>
+      <sprite>sprites\wideHouse3</sprite>
+    </sprites>
+    <sprites name="weapons">
+      <sprite>sprites\gun</sprite>
+      <sprite>sprites\enemyBullet</sprite>
+      <sprite>sprites\playerBullet</sprite>
+      <sprite>sprites\gunSmoke</sprite>
+      <sprite>sprites\bulletFired</sprite>
+      <sprite>sprites\dynomite</sprite>
+      <sprite>sprites\boom</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
