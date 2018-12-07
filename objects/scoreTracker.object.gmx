@@ -123,7 +123,44 @@ sprite = yomicProfile
 color = make_color_rgb($33,$99,$FF)
 break;
 
+
+
 case 10:
+name = "Hikagi"
+quote = "~poke ~poke Giving up nyao?!"
+sprite = hikagiProfile
+color = make_color_rgb($e6,$70,$54)
+break;
+
+case 11:
+name = "Usalion"
+quote = "What do you mean you like being six feet under? I don't get it."
+sprite = cowboyHaroProfile
+color = make_color_rgb($ca,$76,$e3)
+break;
+
+case 12:
+name = "Luca"
+quote = "It's dead!"
+sprite = lucaboyProfile
+color = make_color_rgb($dc,$af,$af)
+break;
+
+case 13:
+name = "Rdein"
+quote = "Kishishishi, Now I'll eat your two large eyes, Frog"
+sprite = rdeinProfile
+color = c_red
+break;
+
+case 14:
+name = "alice kahlúa"
+quote = "heh.... easy as shooting frogs in a barrel..."
+sprite = aliceProfile
+color = make_color_rgb($ff,$d1,$dc)
+break;
+
+case 1000:
 name = "BIG Yomic"
 quote = "Looks like you were a little too slow pardner!"
 sprite = yomicIdle

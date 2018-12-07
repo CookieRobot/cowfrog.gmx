@@ -37,7 +37,7 @@ down = 0
 forward =0;
 throw =0;
 toss = 0;
-choice = irandom_range(1,9)
+choice = irandom_range(1,14)
 switch(choice)
 {
     case 1:
@@ -111,6 +111,46 @@ switch(choice)
         forward =yomicGunF;
         throw =yomicGunT;
         toss = yomicToss;
+    break;
+    case 10:
+        sprite_index = hikagiProfile
+        dead = hikagiDed
+        down = hikagiGunD
+        forward =hikagiGunF;
+        throw =hikagiGunT;
+        toss = hikagiToss;
+    break;
+    case 11:
+        sprite_index = cowboyHaroProfile
+        dead = cowboyHaroDed
+        down = cowboyHaroGunD
+        forward =cowboyHaroGunF;
+        throw =cowboyHaroGunT;
+        toss = cowboyHaroToss;
+    break;
+    case 12:
+        sprite_index = lucaboyProfile
+        dead = lucaboyDed
+        down = lucaboyGunD
+        forward =lucaboyGunF;
+        throw =lucaboyGunT;
+        toss = lucaboyToss;
+    break;
+    case 13:
+        sprite_index = rdeinProfile
+        dead = rdeinDed
+        down = rdeinGunD
+        forward =rdeinGunF;
+        throw =rdeinGunT;
+        toss = rdeinToss;
+    break;
+    case 14:
+        sprite_index = aliceProfile
+        dead = aliceDed
+        down = aliceGunD
+        forward =aliceGunF;
+        throw =aliceGunT;
+        toss = aliceToss;
     break;
 
 }
