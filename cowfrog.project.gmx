@@ -210,6 +210,7 @@
     <object>objects\scale</object>
     <object>objects\barrel</object>
     <object>objects\bigYomic</object>
+    <object>objects\parallax</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title</room>
