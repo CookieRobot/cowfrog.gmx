@@ -179,6 +179,7 @@
     <script>scripts\gameOverMusic.gml</script>
     <script>scripts\collisionsIni.gml</script>
     <script>scripts\collisionsStep.gml</script>
+    <script>scripts\destroyOffScreen.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>

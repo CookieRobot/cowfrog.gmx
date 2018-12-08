@@ -8,6 +8,43 @@
   <parentName>cowBoy</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if ded !=0
+{
+exit;
+}
+
+xVelo = facing;
+image_speed = .35;
+//next run is when cowboy changes direction
+nextRun = (room_speed*4)-(global.town*.1);
+if nextRun &lt;room_speed/4
+{
+    nextRun = room_speed/4
+}
+alarm[1] = nextRun;
+print("walk")
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="1">
       <action>
         <libid>1</libid>
@@ -25,22 +62,39 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if ded!=0
+            <string>if ded !=0
 {
 exit;
 }
 
-xVelo = facing;
-if xVelo&gt;0 
+//too far to the left to fire
+if(x&lt;view_xview[0]+8)
 {
-    xVelo = 3;
+print("cannot shoot")
+    alarm[1] = room_speed;
+    xVelo = facing*2;
+    exit
 }
-nextRun = (room_speed*12)-(global.town);
+
+
+
+nextRun = (room_speed*4)-(global.town*.1);
 if nextRun &lt;room_speed/4
 {
     nextRun = room_speed/4
 }
-alarm[1] = nextRun;
+
+alarm[2] = nextRun;
+
+print("stop")
+//stop moving
+if grounded
+{
+xVelo = 0;
+image_index = 0
+image_speed = 0;
+alarm[0] = nextRun*.5
+}
 </string>
           </argument>
         </arguments>
@@ -82,7 +136,7 @@ var bullet = instance_create(x,y,enemyshoot);
         
     
 
-alarm[0] = nextShot;
+
 </string>
           </argument>
         </arguments>
@@ -105,12 +159,16 @@ alarm[0] = nextShot;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index = forward;
+            <string>
+
+sprite_index = forward;
 image_speed = .35;
 image_index = 0;
 xVelo = 2*facing;
 yVelo = -3;
-alarm[1] = 1
+alarm[0] = room_speed;
+alarm[1] = room_speed;
+print("runboy");
 </string>
           </argument>
         </arguments>
