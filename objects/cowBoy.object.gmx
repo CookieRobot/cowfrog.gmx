@@ -167,8 +167,9 @@ if nextShot &lt;room_speed/2
 {
     nextShot = room_speed/2
 }
-event_user(0);
+
 alarm[0] = room_speed;
+event_user(0);
 bulletVelo = 1.5 +(global.town*.2);
 </string>
           </argument>
