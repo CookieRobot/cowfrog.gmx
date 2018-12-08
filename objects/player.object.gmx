@@ -124,6 +124,8 @@ maxXvelo =4;
 bulletVelo = 24;
 ded =0;
 recentFire = 5;
+clip=6;
+reloadTime = room_speed / 2;
 
 
 //gravityIni = jumpVelo/-22.5
@@ -170,6 +172,31 @@ stun = false;
 lastFire = false;
 lastJump = false;
 
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// reload
+clip = 6;
 
 </string>
           </argument>
@@ -309,45 +336,55 @@ facing = xMove;
 //fire bullet
 if pressFireChange
 {
-    recentFire = 0;
-    var bullet = instance_create(x,y,playerShot);
-    //print("shoot")
-    if pressUp
-    {
-    bullet.x = x-5*facing
-    bullet.direction = 90;
-    bullet.image_angle = 90;
-    if facing&lt;0
-        {
-            bullet.x-=1;
-        }
-    }
-    else if pressDown &amp;&amp; !grounded
-    {
-    bullet.x = x+3*facing
-    bullet.y = y+2
-    bullet.direction = 270;
-    bullet.image_angle = 270;
-    if facing &lt;0
-        {
-        bullet.x +=2;
-        
+    if clip &lt;= 0 {
+        // reload
+        if (alarm[2] == -1) {
+            alarm[2] = reloadTime;
         }
     }
     else
     {
-        bullet.y = y+3
-        bullet.x = x-4*facing
-        if facing &lt;0
+        recentFire = 0;
+        var bullet = instance_create(x,y,playerShot);
+        --clip;
+        //print("shoot")
+        if pressUp
         {
-        bullet.y = y+4
-        bullet.image_angle = 180;
-        bullet.direction = 180;
+        bullet.x = x-5*facing
+        bullet.direction = 90;
+        bullet.image_angle = 90;
+        if facing&lt;0
+            {
+                bullet.x-=1;
+            }
         }
-        
+        else if pressDown &amp;&amp; !grounded
+        {
+        bullet.x = x+3*facing
+        bullet.y = y+2
+        bullet.direction = 270;
+        bullet.image_angle = 270;
+        if facing &lt;0
+            {
+            bullet.x +=2;
+            
+            }
+        }
+        else
+        {
+            bullet.y = y+3
+            bullet.x = x-4*facing
+            if facing &lt;0
+            {
+            bullet.y = y+4
+            bullet.image_angle = 180;
+            bullet.direction = 180;
+            }
+            
+        }
+       // part_particles_create(global.smokeSystem, bullet.x, bullet.y, global.smoke, 1);
+    
     }
-   // part_particles_create(global.smokeSystem, bullet.x, bullet.y, global.smoke, 1);
-
 }
 
 
