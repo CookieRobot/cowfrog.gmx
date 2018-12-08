@@ -168,6 +168,10 @@
   <backgrounds name="background">
     <background>background\background</background>
     <background>background\cowfrog</background>
+    <background>background\para_0</background>
+    <background>background\para_1</background>
+    <background>background\para_2</background>
+    <background>background\para_3</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">

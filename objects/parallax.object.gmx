@@ -27,9 +27,9 @@
             <kind>1</kind>
             <string>if instance_exists(player)
 {
-    background_x[0] = player.x * -0.05;
-    background_x[1] = player.x * -0.15;
-    background_x[2] = player.x * -0.25;
+    background_x[0] = view_xview[0] * -0.05;
+    background_x[1] = view_xview[0] * -0.15;
+    background_x[2] = view_xview[0] * -0.25;
 }
 
 </string>
