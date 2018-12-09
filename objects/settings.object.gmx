@@ -25,8 +25,138 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.screenShake = 0
-global.resolution = 0 
+            <string>print("settings created")
+
+
+
+//screen shake
+targetX = 0;
+targetY = 0;
+multiplier = 0
+rida = 0;
+startY= 0
+startX=0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>multiplier = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+
+targetX = view_xview[0];
+targetY = view_yview[0];
+
+if (global.screenShakeTimer &lt;1)
+{
+    if (global.rida == 1)
+    {
+        view_xview[0]+=global.rida*(irandom_range(-1,1))
+        view_yview[0]+=global.rida*(irandom_range(-1,1))
+    }
+exit;
+}
+
+
+startX = irandom_range(0,1);
+startY = irandom_range(0,1);
+if startX == 0 {startX = -1}
+if startY == 0 {startY = -1}
+startX=global.screenShake*(startX+irandom_range(-1,1))+global.rida*(startX+irandom_range(-1,1))*global.screenShake
+startY=global.screenShake*(startY+irandom_range(-1,1))+global.rida*(startY+irandom_range(-1,1))*global.screenShake
+view_xview[0]+=startX;
+view_yview[0]+=startY;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (global.screenShakeTimer &lt;1&amp;&amp;!global.rida)
+{
+exit;
+}
+    view_xview[0] = targetX
+    view_yview[0] = targetY
+    global.screenShakeTimer-=1
+
 </string>
           </argument>
         </arguments>

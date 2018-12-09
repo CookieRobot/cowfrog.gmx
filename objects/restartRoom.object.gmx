@@ -30,6 +30,8 @@ if (other.ded == 0)
 {
 room_goto(game);
 global.town +=1;
+
+
 }
 </string>
           </argument>

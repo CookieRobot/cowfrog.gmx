@@ -29,8 +29,16 @@
 set = instance_find(settings,0);
 if set == noone
 {
-set = instance_create(0,0,settings);
+
+instance_create(0,0,settings);
 }
+
+
+global.screenShake = 0
+global.screenShakeTimer = 0
+global.resolution = 0 
+global.rida = 0
+
 
 
 gpjump = gp_face1;
@@ -208,8 +216,10 @@ if paused
         paused = false
         if(x&gt;view_xview[0]+100)
         {
+            
             room_goto(title);
             print("goto title")
+            
         }
         else
         {
