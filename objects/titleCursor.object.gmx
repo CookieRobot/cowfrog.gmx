@@ -152,8 +152,9 @@ if(pressJumpChange&amp;&amp; x &lt; 100)
 else if pressJumpChange
 {
     print("controller")
-    settingControls = true
-    setControlsID=1;
+    //settingControls = true
+    //setControlsID=1;
+    room_goto(optionsRoom)
     exit;
 //config
 }

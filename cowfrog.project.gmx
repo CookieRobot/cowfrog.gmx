@@ -184,6 +184,14 @@
     <script>scripts\collisionsIni.gml</script>
     <script>scripts\collisionsStep.gml</script>
     <script>scripts\destroyOffScreen.gml</script>
+    <script>scripts\createMenu.gml</script>
+    <script>scripts\takeControl.gml</script>
+    <script>scripts\editSettings.gml</script>
+    <script>scripts\getSettings.gml</script>
+    <script>scripts\findMenu.gml</script>
+    <script>scripts\validate2DArrayPosition.gml</script>
+    <script>scripts\displayTextSetUp.gml</script>
+    <script>scripts\setOptionMatchSetting.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
@@ -199,25 +207,38 @@
     <object>objects\playerAttack</object>
     <object>objects\playerHurt</object>
     <object>objects\house</object>
-    <object>objects\cowBoy</object>
-    <object>objects\standBoy</object>
-    <object>objects\snipeBoy</object>
-    <object>objects\dynaBoy</object>
-    <object>objects\runBoy</object>
-    <object>objects\jumpBoy</object>
     <object>objects\houseTrigger</object>
-    <object>objects\scoreTracker</object>
     <object>objects\titleCursor</object>
-    <object>objects\dynamite</object>
-    <object>objects\enemyshoot</object>
-    <object>objects\explosion</object>
+    <object>objects\scoreTracker</object>
     <object>objects\scale</object>
-    <object>objects\barrel</object>
-    <object>objects\bigYomic</object>
     <object>objects\parallax</object>
+    <objects name="menus">
+      <object>objects\menuManager</object>
+      <object>objects\menuManagerRoom</object>
+      <object>objects\menuManagerSubMenu</object>
+      <object>objects\menuOption</object>
+      <object>objects\menuOptionSubmenu</object>
+      <object>objects\menuOptionSettings</object>
+      <object>objects\menuDisplayText</object>
+    </objects>
+    <object>objects\settings</object>
+    <objects name="enemies">
+      <object>objects\enemyshoot</object>
+      <object>objects\explosion</object>
+      <object>objects\standBoy</object>
+      <object>objects\cowBoy</object>
+      <object>objects\snipeBoy</object>
+      <object>objects\dynaBoy</object>
+      <object>objects\runBoy</object>
+      <object>objects\jumpBoy</object>
+      <object>objects\dynamite</object>
+      <object>objects\barrel</object>
+      <object>objects\bigYomic</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\title</room>
+    <room>rooms\optionsRoom</room>
     <room>rooms\game</room>
     <room>rooms\gameOver</room>
   </rooms>
