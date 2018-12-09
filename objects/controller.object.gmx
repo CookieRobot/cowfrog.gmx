@@ -25,7 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//check for controller
+            <string>//create game settings if doesnt exist
+set = instance_find(settings,0);
+if set == noone
+{
+set = instance_create(0,0,settings);
+}
 
 
 gpjump = gp_face1;
@@ -35,6 +40,9 @@ gpleft = gp_padl;
 gpup = gp_padu;
 gpdown = gp_padd;
 gpright = gp_padr;
+gpconfirm = gp_face1;
+gpcancel = gp_face3;
+
 
 jump = ord('A');
 pause = ord('P');
@@ -43,7 +51,8 @@ left = vk_left;
 up = vk_up;
 down = vk_down;
 right = vk_right;
-
+confirm = ord('A');
+cancel = ord('S');
 
 
 target = noone;
@@ -215,6 +224,13 @@ target.pressJumpChange = keyboard_check_pressed(jump)||gamepad_button_check_pres
 target.pressFireChange = keyboard_check_pressed(fire)||gamepad_button_check_pressed(0, gpfire);
 target.pressLeftChange=keyboard_check_pressed(left)||gamepad_button_check_pressed(0, gpleft);
 target.pressRightChange = keyboard_check_pressed(right)||gamepad_button_check_pressed(0, gpright);
+target.pressDownChange = keyboard_check_pressed(down)||gamepad_button_check_pressed(0, gpdown);
+target.pressUpChange = keyboard_check_pressed(up)||gamepad_button_check_pressed(0, gpup);
+
+target.pressConfirmChange = keyboard_check_pressed(confirm)||gamepad_button_check_pressed(0, gpconfirm);
+target.pressCancelChange = keyboard_check_pressed(cancel)||gamepad_button_check_pressed(0, gpcancel);
+
+
 target.pressPause = keyboard_check_pressed(pause)||gamepad_button_check_pressed(0, gppause);
 
 
@@ -231,10 +247,9 @@ target.pressFire = keyboard_check(fire)||gamepad_button_check(0, gpfire);
 
 
 target.pressLeft = keyboard_check(left)||gamepad_button_check(0, gpleft)
-
-
 target.pressRight = keyboard_check(right)||gamepad_button_check(0, gpright)
-
+target.pressUp = keyboard_check(up)||gamepad_button_check(0, gpup)
+target.pressDown = keyboard_check(down)||gamepad_button_check(0, gpdown)
 
 
 
