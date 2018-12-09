@@ -6,7 +6,19 @@ switch(argument0)
     break;
     
     case "screenShake":
+    print("changing screenShake")
     global.screenShake = argument1;
+    
+    
+    if (global.screenShake == 4)
+    {
+        global.rida = 1;
+    }
+    else
+    {
+        global.rida = 0;
+    }
+    
     break;
     
     case "resolution":

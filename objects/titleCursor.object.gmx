@@ -38,6 +38,15 @@ control = instance_find(controller,0);
 if control == noone
 {
 control = instance_create(0,0,controller);
+control.persistent = true;
+}
+
+set = instance_find(settings,0);
+if set == noone
+{
+
+set = instance_create(0,0,settings);
+set.persistent = true;
 }
 
 
@@ -151,7 +160,8 @@ if(pressJumpChange&amp;&amp; x &lt; 100)
 }
 else if pressJumpChange
 {
-    print("controller")
+    
+    
     //settingControls = true
     //setControlsID=1;
     room_goto(optionsRoom)

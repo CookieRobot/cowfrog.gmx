@@ -10,7 +10,14 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code></code>
+  <code>s = instance_find(settings,0)
+if s != noone
+{
+    s.targetX = 0
+    s.targetY = 0
+    
+}
+callShake(30);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

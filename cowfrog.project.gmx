@@ -190,8 +190,9 @@
     <script>scripts\getSettings.gml</script>
     <script>scripts\findMenu.gml</script>
     <script>scripts\validate2DArrayPosition.gml</script>
-    <script>scripts\displayTextSetUp.gml</script>
     <script>scripts\setOptionMatchSetting.gml</script>
+    <script>scripts\displayTextSetUp.gml</script>
+    <script>scripts\callShake.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
@@ -202,7 +203,6 @@
     <object>objects\objSolid</object>
     <object>objects\controller</object>
     <object>objects\slope</object>
-    <object>objects\restartRoom</object>
     <object>objects\playerShot</object>
     <object>objects\playerAttack</object>
     <object>objects\playerHurt</object>
@@ -235,6 +235,7 @@
       <object>objects\barrel</object>
       <object>objects\bigYomic</object>
     </objects>
+    <object>objects\restartRoom</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title</room>
