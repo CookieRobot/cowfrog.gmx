@@ -30,7 +30,7 @@ r = 255;
 g = 255;
 b = 255;
 depth = -100;
-hp = 15;
+hp = 10;
 collisionsIni();
 facing = 1
 play = instance_find(player,0);
