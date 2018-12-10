@@ -164,6 +164,9 @@
       <sprite>sprites\dynomite</sprite>
       <sprite>sprites\boom</sprite>
     </sprites>
+    <sprites name="ui">
+      <sprite>sprites\spr_ui_reloadShell</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background</background>
