@@ -16,8 +16,7 @@ if s != noone
     s.targetX = 0
     s.targetY = 0
     
-}
-callShake(30);</code>
+}</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

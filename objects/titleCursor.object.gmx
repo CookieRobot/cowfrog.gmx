@@ -199,7 +199,7 @@ else
 {
 draw_self();
 draw_text(32,144,"START");
-draw_text(144,144,"CONTROLS");
+draw_text(144,144,"OPTIONS");
 draw_text(0,-2,"Use Jump (default A) and arrow keys");
 }
 </string>

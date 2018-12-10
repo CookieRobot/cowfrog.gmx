@@ -36,9 +36,10 @@ instance_create(0,0,settings);
 
 global.screenShake = 0
 global.screenShakeTimer = 0
-global.resolution = 0 
+global.resolution = 0
 global.rida = 0
 
+editSettings("resolution",2);
 
 
 gpjump = gp_face1;
@@ -174,6 +175,30 @@ part_type_direction(global.bloodBlueBig,45,135,0,0);            //The direction
 //part_type_orientation(global.Particle1,0,0,0,0,1);           //This changes the rotation of the particle
 //part_type_blend(global.Particle1,1);                         //This is the blend mode, either additive or normal
 part_type_life(global.bloodBlueBig,90,90);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//reseting window size
+window_center();
 </string>
           </argument>
         </arguments>
