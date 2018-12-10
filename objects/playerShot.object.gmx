@@ -30,7 +30,7 @@ image_xscale = 2;
 depth=-1000;
 alarm[0] = room_speed*10
 alarm[1] = 1;
-
+callShake(5);
 </string>
           </argument>
         </arguments>
