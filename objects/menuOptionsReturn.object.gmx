@@ -27,16 +27,6 @@
             <kind>1</kind>
             <string>display = noone;
 manager = noone;
-//what setting to change
-name = ""
-//settings value to set to
-attribute = 0
-
-
-subMenuObject[0,0] = noone;
-subMenuText[0,0] = "";
-subMenuAttribute[0,0] = 0;
-
 
 </string>
           </argument>
@@ -60,8 +50,8 @@ subMenuAttribute[0,0] = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>editSettings(name,attribute)
-
+            <string>
+room_goto(manager.cancel)
 </string>
           </argument>
         </arguments>

@@ -222,6 +222,8 @@
       <object>objects\menuOption</object>
       <object>objects\menuOptionSubmenu</object>
       <object>objects\menuOptionSettings</object>
+      <object>objects\menuOptionsReturn</object>
+      <object>objects\menuOptionsControls</object>
       <object>objects\menuDisplayText</object>
     </objects>
     <object>objects\settings</object>

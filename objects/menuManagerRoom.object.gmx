@@ -134,6 +134,8 @@ if(pressUpChange)
 
 if(pressConfirmChange)
 {
+
+    pressConfirmChange = false;
     with(menuOptions[height,length])
     {
         event_user(0);
@@ -142,6 +144,7 @@ if(pressConfirmChange)
 
 if (pressCancelChange)
 {
+pressCancelChange = false;
 control.target = noone;
 room_goto(cancel)
 }
