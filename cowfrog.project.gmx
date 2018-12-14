@@ -167,6 +167,7 @@
     <sprites name="ui">
       <sprite>sprites\spr_ui_reloadShell</sprite>
     </sprites>
+    <sprite>sprites\blackFadeout</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background</background>
@@ -241,6 +242,7 @@
       <object>objects\bigYomic</object>
     </objects>
     <object>objects\restartRoom</object>
+    <object>objects\fadeOut</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title</room>

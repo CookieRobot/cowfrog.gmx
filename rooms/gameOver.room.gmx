@@ -10,7 +10,8 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>s = instance_find(settings,0)
+  <code>instance_create(0,0,fadeOut);
+s = instance_find(settings,0)
 if s != noone
 {
     s.targetX = 0
