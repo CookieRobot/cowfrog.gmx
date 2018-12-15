@@ -168,6 +168,8 @@
       <sprite>sprites\spr_ui_reloadShell</sprite>
     </sprites>
     <sprite>sprites\blackFadeout</sprite>
+    <sprite>sprites\gubbsFly</sprite>
+    <sprite>sprites\gubbsDed</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background</background>
@@ -176,6 +178,7 @@
     <background>background\para_1</background>
     <background>background\para_2</background>
     <background>background\para_3</background>
+    <background>background\cfr</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -243,6 +246,7 @@
     </objects>
     <object>objects\restartRoom</object>
     <object>objects\fadeOut</object>
+    <object>objects\gubbles</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title</room>

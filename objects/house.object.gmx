@@ -38,7 +38,7 @@ jumpBoys = 0;
 snipeBoys = 0;
 barrelCount = 0;
 bigYomicCount= 0;
-
+gubbsCount = 0
 jumpBoysSpawned = 0;
 
 jumpBoyLocation[0] = 0;
@@ -173,6 +173,13 @@ while snipeBoys&gt;0
     snipeBoys-=1;
 }
 
+while gubbsCount&gt;0
+{
+    instance_create(x+firstWindow+windowCount *48,58,gubbles);
+    windowCount+=1;
+    gubbsCount-=1;
+}
+
 
 
 </string>
@@ -259,7 +266,7 @@ while cowboyCount&gt;0
     if (chooseLocation == 1)
     {
         //IF THEY SPAWN IN A WINDOW ADD ANOTHER CASE HEREAND INCREMENT THE ENEMY COUNT AND INCREASE THE RANDOM RANGE
-        chooseBoy = irandom_range(0,2)
+        chooseBoy = irandom_range(0,3)
         switch(chooseBoy)
         {
             case 0: 
@@ -278,6 +285,12 @@ while cowboyCount&gt;0
         
                 
                     snipeBoys+=1;
+            
+            break;  
+            case 3:
+        
+                
+                    gubbsCount+=1;
             
             break;    
         }
