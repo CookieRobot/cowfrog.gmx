@@ -266,7 +266,10 @@ while cowboyCount&gt;0
     if (chooseLocation == 1)
     {
         //IF THEY SPAWN IN A WINDOW ADD ANOTHER CASE HEREAND INCREMENT THE ENEMY COUNT AND INCREASE THE RANDOM RANGE
-        chooseBoy = irandom_range(0,3)
+        
+        //spawn only 1 gubbs 
+        
+        chooseBoy = irandom_range(0,3-gubbsCount)
         switch(chooseBoy)
         {
             case 0: 
@@ -290,7 +293,7 @@ while cowboyCount&gt;0
             case 3:
         
                 
-                    gubbsCount+=1;
+                    gubbsCount=1;
             
             break;    
         }

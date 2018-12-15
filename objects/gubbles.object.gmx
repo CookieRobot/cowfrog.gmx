@@ -77,8 +77,10 @@ alarm[1] = 1
     d.xVelo = 0
     d.yVelo = 2
     d.choice = 1001;
-    
+    if !ded
+    {
     alarm[1] = room_speed *random_range(.3,.5)
+    }
 </string>
           </argument>
         </arguments>
@@ -190,6 +192,7 @@ if  pastHalf &amp;&amp;  bitBeforeEnd &amp;&amp; ammo
             <string>if !ded
 {
     ded = true;
+    alarm[1] = -1;
     yVelo = -2
     global.bounty+=irandom_range(300,500);
     sprite_index = gubbsDed
