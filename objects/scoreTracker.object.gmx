@@ -165,11 +165,13 @@ name = "BIG Yomic"
 quote = "Looks like you were a little too slow pardner!"
 sprite = yomicIdle
 color = make_color_rgb($33,$99,$FF)
+break;
 case 1001:
 name = "Gubbles"
 quote = "Gubbles!"
 sprite = gubbsFly
 color = make_color_rgb($33,$99,$FF)
+break;
 }
 
 draw_text_ext(view_xview[0]+120,view_yview[0]+16,name+" has collected your $"+
