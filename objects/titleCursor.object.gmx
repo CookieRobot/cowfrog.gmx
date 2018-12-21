@@ -31,7 +31,7 @@
    
    
 controlSetup = false;
-draw_set_font(font1)
+//draw_set_font(font2)
 draw_set_colour(c_white);
 draw_set_halign(fa_left);
 control = instance_find(controller,0);
@@ -152,13 +152,13 @@ for (i=gp_face1; i&lt;gp_axisrv; i++)
 }
 
 
-if pressLeftChange{x=16}
-if pressRightChange{x=128}
-if(pressJumpChange&amp;&amp; x &lt; 100)
+if pressUpChange{y=96}
+if pressDownChange{y=128}
+if(pressConfirmChange&amp;&amp; y &lt; 100)
 {
     room_goto(game);
 }
-else if pressJumpChange
+else if pressConfirmChange
 {
     
     
@@ -198,9 +198,11 @@ draw_text(32,144,setControlsText[setControlsID]);
 else
 {
 draw_self();
-draw_text(32,144,"START");
-draw_text(144,144,"OPTIONS");
-draw_text(0,-2,"Use Jump (default A) and arrow keys");
+draw_text(32,96,"START");
+draw_text(32,128,"OPTIONS");
+//draw_text_transformed(32,96,"START",1/5,1/5,0);
+//draw_text_transformed(32,128,"OPTIONS",1/5,1/5,0);
+//draw_text(0,-2,"Use Jump (default A) and arrow keys");
 }
 </string>
           </argument>

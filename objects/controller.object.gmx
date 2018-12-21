@@ -25,7 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//create game settings if doesnt exist
+            <string>//create font 
+//f = font_add("Rye-Regular.ttf", 12, false, false, 32, 128);
+draw_set_font(font1);
+
+//create game settings if doesnt exist
 set = instance_find(settings,0);
 if set == noone
 {
