@@ -241,6 +241,7 @@
     <sprite>sprites\blackFadeout</sprite>
     <sprite>sprites\gubbsFly</sprite>
     <sprite>sprites\gubbsDed</sprite>
+    <sprite>sprites\spr_empty</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background</background>
