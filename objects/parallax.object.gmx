@@ -28,8 +28,8 @@
             <string>if instance_exists(player)
 {
     background_x[0] = view_xview[0] * -0.05;
-    background_x[1] = view_xview[0] * -0.15;
-    background_x[2] = view_xview[0] * -0.25;
+    background_x[1] = view_xview[0] * -0.08;
+    background_x[2] = view_xview[0] * -0.11;
 }
 
 </string>
