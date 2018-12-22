@@ -205,6 +205,7 @@ part_particles_create(global.woodChunk2System, other.x, other.y, global.woodChun
             <string>hp-=1;
 hit = room_speed*.5;
 instance_destroy(other)
+audio_play_sound(damageEnemy1,0,false);
 if(hp &lt;1)
 {
     instance_destroy(self);

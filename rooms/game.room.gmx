@@ -17,7 +17,24 @@ if s != noone
     s.targetY = 0
     
 }
-instance_create(0,0,fadeOut);</code>
+instance_create(0,0,fadeOut);
+
+//YEEEEEE HAAAAAWWW
+i = irandom_range(0,2)
+a = noone
+switch (i)
+{
+case 0:
+a = frogYeehaw
+break;
+case 1:
+a = frog_howdy
+break;
+case 2:
+a = frog_fx
+break;
+}
+audio_play_sound(a, 1, false);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -58,7 +75,7 @@ instance_create(0,0,fadeOut);</code>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="player" x="32" y="144" name="inst_4A3B930F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="player" x="32" y="80" name="inst_4A3B930F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSolid" x="-16" y="0" name="inst_07A24AB4" locked="0" code="" scaleX="1" scaleY="10" colour="4294967295" rotation="0"/>
     <instance objName="objSolid" x="0" y="160" name="inst_408F9ADF" locked="0" code="" scaleX="120" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="restartRoom" x="1920" y="0" name="inst_D3B4AE57" locked="0" code="" scaleX="1" scaleY="10" colour="4294967295" rotation="0"/>

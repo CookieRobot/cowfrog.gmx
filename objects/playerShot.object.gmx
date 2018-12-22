@@ -31,6 +31,25 @@ depth=-1000;
 alarm[0] = room_speed*10
 alarm[1] = 1;
 callShake(5);
+//random3Audio(gunshot1,gunshot2,gunshot3);
+randomAudio = irandom_range(0,3)
+playThis = noone
+switch (randomAudio)
+{
+case 0:
+playThis = gunshot1
+break;
+case 1:
+playThis = gunshot2
+break;
+case 2:
+playThis = gunshot3
+break;
+case 3:
+playThis = gunShotGarb
+break;
+}
+audio_play_sound(playThis, 1, false);
 </string>
           </argument>
         </arguments>

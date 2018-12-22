@@ -32,6 +32,7 @@ global.town = 1;
 choice = 1;
 music = noone;
 inputBooleans();
+control = noone;
 //draw_set_font(font1);
 </string>
           </argument>
@@ -160,6 +161,34 @@ sprite = aliceProfile
 color = make_color_rgb($ff,$d1,$dc)
 break;
 
+case 15:
+name = "Tom C. Anemo"
+quote = "Think you're the worst? Now you're in a hearse."
+sprite = tomProfile
+color = make_color_rgb($48,$d2,$1d)
+break;
+
+case 16:
+name = "Big Mamba"
+quote = "Wiggle your big toe."
+sprite = oraProfile
+color = make_color_rgb($f2,$88,$88)
+break;
+
+case 17:
+name = "Perfectly Ordinary Nino"
+quote = "Do my best ze~"
+sprite = rakProfile
+color = make_color_rgb($cc,$00,$00)
+break;
+
+case 18:
+name = "PKBT"
+quote = "yeehaw get owned etc"
+sprite = pkbtProfile
+color = make_color_rgb($f1,$c4,$0f)
+break;
+
 case 1000:
 name = "BIG Yomic"
 quote = "Looks like you were a little too slow pardner!"
@@ -192,16 +221,18 @@ draw_text(view_xview[0]+120,view_yview[0],"Bounty: $" + string(global.bounty)+ "
 
 if (pressFireChange||pressJumpChange)
 {
+setBGM(Angry_frog_from_the_east)
+control = noone;
 over = false;
 room_goto(game);
 global.bounty = 10000;
 global.town = 1; 
 inputBooleans();
 
-if (music!=noone)
-{
-audio_stop_sound(music);
-}
+    if (music!=noone)
+    {
+        audio_stop_sound(music);
+    }
 
 }
 </string>

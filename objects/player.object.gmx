@@ -40,7 +40,7 @@ if s == noone
 {
 s = instance_create(0,0,scoreTracker);
 }
-
+setBGM(Angry_frog_from_the_east);
 
 draw_set_colour(c_black);
 draw_set_halign(fa_center);
@@ -113,8 +113,8 @@ down = vk_down;
 right = vk_right;
 
 
-yVelo=0;
-xVelo=0;
+yVelo=-4;
+xVelo=5;
 movingPlat = noone;
 grounded = false;
 facing=1;
@@ -168,7 +168,8 @@ alarm[0] =-1
 
 //input booleans
 inputBooleans();
-stun = false;
+stun = true;
+alarm[1] = room_speed
 
 
 //used for checking single presses
@@ -250,7 +251,8 @@ clip++;
 room_goto(gameOver);
 draw_set_colour(c_white);
 s.over = true;
-control.target = s; 
+control.target = s;
+s.control = control; 
 s.music = gameOverMusic(s.choice)
 </string>
           </argument>
@@ -332,6 +334,7 @@ facing = xMove;
     {
         pressJumpChange = false;
         yVelo = jumpVelo;
+        audio_play_sound(playerJump,0,false);
         
     }
     
@@ -902,6 +905,9 @@ if ded!=0
 {
 exit;
 }
+audio_play_sound(playerHit,0,false);
+//music
+setBGM(noone);
 part_particles_create(global.bloodSystem, other.x, other.y, global.blood, 15);
 if control == noone
 {

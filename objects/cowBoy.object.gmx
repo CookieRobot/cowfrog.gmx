@@ -37,7 +37,7 @@ down = 0
 forward =0;
 throw =0;
 toss = 0;
-choice = irandom_range(1,14)
+choice = irandom_range(1,18)
 switch(choice)
 {
     case 1:
@@ -151,6 +151,38 @@ switch(choice)
         forward =aliceGunF;
         throw =aliceGunT;
         toss = aliceToss;
+    break;
+    case 15:
+        sprite_index = tomProfile
+        dead = tomDed
+        down = tomGunD
+        forward =tomGunF;
+        throw =tomGunT;
+        toss = tomToss;
+    break;
+    case 16:
+        sprite_index = oraProfile
+        dead = oraDed
+        down = oraGunD
+        forward =oraGunF;
+        throw =oraGunT;
+        toss = oraToss;
+    break;
+    case 17:
+        sprite_index = rakProfile
+        dead = rakDed
+        down = rakGunD
+        forward =rakGunF;
+        throw =rakGunT;
+        toss = rakToss;
+    break;
+    case 18:
+        sprite_index = pkbtProfile
+        dead = pkbtDed
+        down = pkbtGunD
+        forward =pkbtGunF;
+        throw =pkbtGunT;
+        toss = pkbtToss;
     break;
 
 }
@@ -267,6 +299,7 @@ x = 1900
 {
 exit;
 }
+random3Audio(killEnemy1,killEnemy2,killEnemy3);
 grav = .35
 
 global.bounty+=irandom_range(50,100);

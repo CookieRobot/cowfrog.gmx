@@ -25,7 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//create font 
+            <string>//music 
+global.BGM = noone;
+global.nextTrack = noone;
+//create font 
 //f = font_add("Rye-Regular.ttf", 12, false, false, 32, 128);
 draw_set_font(font1);
 
@@ -167,7 +170,7 @@ part_type_life(global.bloodBlue,90,90);
 
 global.bloodBlueBigSystem=part_system_create();
 global.bloodBlueBig=part_type_create();
-part_type_shape(global.bloodBlueBig,pt_shape_pixel);            //This defines the particles shape
+part_type_shape(global.bloodBlueBig,pt_shape_circle);            //This defines the particles shape
 //part_type_sprite(global.smoke,gunSmoke,1,0,0)
 part_type_size(global.bloodBlueBig,.5,5,0,2);                    //This is for the size
 //part_type_scale(global.Particle1,1,1);                       //This is for scaling
@@ -179,6 +182,42 @@ part_type_direction(global.bloodBlueBig,45,135,0,0);            //The direction
 //part_type_orientation(global.Particle1,0,0,0,0,1);           //This changes the rotation of the particle
 //part_type_blend(global.Particle1,1);                         //This is the blend mode, either additive or normal
 part_type_life(global.bloodBlueBig,90,90);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//stop music
+if (global.BGM!=noone)
+{
+audio_stop_sound(global.BGM);
+}
+
+global.BGM = global.nextTrack;
+if (global.BGM!=noone)
+{
+    audio_play_sound(global.BGM, 10, true);
+    audio_sound_set_track_position(global.BGM, 0);
+    audio_sound_gain(global.BGM, 1, 0);
+}
+
 </string>
           </argument>
         </arguments>
@@ -292,6 +331,40 @@ target.pressDown = keyboard_check(down)||gamepad_button_check(0, gpdown)
 
 
 
+
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//music
+if (global.nextTrack != global.BGM)
+{
+//slowly quiet music then play next track.
+
+audio_sound_gain(global.BGM, 0, 300);
+//play next audio
+alarm[1] = 10;
+}
 </string>
           </argument>
         </arguments>

@@ -73,7 +73,12 @@ alarm[1] = 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>d = instance_create(x,y,dynamite)
+            <string>if x &lt;view_xview[0]-10||x&gt;view_xview[0]+view_hview[0]*2+10
+{
+alarm[1] = room_speed *random_range(.3,.5)
+exit;
+}
+d = instance_create(x,y,dynamite)
     d.xVelo = 0
     d.yVelo = 2
     d.choice = 1001;

@@ -25,7 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>inputBooleans();
+            <string>
+
+
+inputBooleans();
 
 
    
@@ -48,7 +51,8 @@ if set == noone
 set = instance_create(0,0,settings);
 set.persistent = true;
 }
-
+//start music
+setBGM(pardner);
 
 control.target = self;
 

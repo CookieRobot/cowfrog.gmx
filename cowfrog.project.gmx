@@ -25,6 +25,27 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\rustyTheme</sound>
+    <sound>sound\gunshot2</sound>
+    <sound>sound\gunshot3</sound>
+    <sound>sound\killEnemy1</sound>
+    <sound>sound\killEnemy2</sound>
+    <sound>sound\killEnemy3</sound>
+    <sound>sound\pardner</sound>
+    <sound>sound\playerJump</sound>
+    <sound>sound\sansundertale</sound>
+    <sound>sound\yomicBoing</sound>
+    <sound>sound\yomicLandSound</sound>
+    <sound>sound\Angry_frog_from_the_east</sound>
+    <sound>sound\damageEnemy1</sound>
+    <sound>sound\playerHit</sound>
+    <sound>sound\explode1</sound>
+    <sound>sound\explode2</sound>
+    <sound>sound\explode3</sound>
+    <sound>sound\frog_fx</sound>
+    <sound>sound\frog_howdy</sound>
+    <sound>sound\frogYeehaw</sound>
+    <sound>sound\gunShotGarb</sound>
+    <sound>sound\gunshot1</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="cowboys">
@@ -140,6 +161,38 @@
         <sprite>sprites\aliceToss</sprite>
         <sprite>sprites\aliceDed</sprite>
       </sprites>
+      <sprites name="tom">
+        <sprite>sprites\tomGunD</sprite>
+        <sprite>sprites\tomGunF</sprite>
+        <sprite>sprites\tomGunT</sprite>
+        <sprite>sprites\tomProfile</sprite>
+        <sprite>sprites\tomToss</sprite>
+        <sprite>sprites\tomDed</sprite>
+      </sprites>
+      <sprites name="ora">
+        <sprite>sprites\oraGunD</sprite>
+        <sprite>sprites\oraGunF</sprite>
+        <sprite>sprites\oraToss</sprite>
+        <sprite>sprites\oraGunT</sprite>
+        <sprite>sprites\oraProfile</sprite>
+        <sprite>sprites\oraDed</sprite>
+      </sprites>
+      <sprites name="rak">
+        <sprite>sprites\rakGunD</sprite>
+        <sprite>sprites\rakGunF</sprite>
+        <sprite>sprites\rakGunT</sprite>
+        <sprite>sprites\rakToss</sprite>
+        <sprite>sprites\rakProfile</sprite>
+        <sprite>sprites\rakDed</sprite>
+      </sprites>
+      <sprites name="pkbt">
+        <sprite>sprites\pkbtProfile</sprite>
+        <sprite>sprites\pkbtDed</sprite>
+        <sprite>sprites\pkbtGunD</sprite>
+        <sprite>sprites\pkbtGunT</sprite>
+        <sprite>sprites\pkbtToss</sprite>
+        <sprite>sprites\pkbtGunF</sprite>
+      </sprites>
     </sprites>
     <sprite>sprites\block</sprite>
     <sprite>sprites\cursorsprite</sprite>
@@ -218,6 +271,8 @@
     <script>scripts\setOptionMatchSetting.gml</script>
     <script>scripts\displayTextSetUp.gml</script>
     <script>scripts\callShake.gml</script>
+    <script>scripts\setBGM.gml</script>
+    <script>scripts\random3Audio.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>

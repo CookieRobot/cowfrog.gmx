@@ -60,6 +60,7 @@ choice = 1000
             <string>image_speed = .4;
 image_index = 0;
 sprite_index = yomicJump;
+
 </string>
           </argument>
         </arguments>
@@ -92,6 +93,7 @@ if(grounded)
         xVelo = 0;
         sprite_index = yomicLand
         image_speed = .4
+        audio_play_sound(yomicLandSound,0,false);
     }
     //facing
     facing = sign(play.x-x);
@@ -170,8 +172,10 @@ b = 0;
 hp-=1;
 part_particles_create(global.bloodBlueSystem, other.x, other.y, global.bloodBlue, 15);
 instance_destroy(other);
+audio_play_sound(damageEnemy1,0,false);
 if (hp&lt;1)
 {
+    random3Audio(killEnemy1,killEnemy2,killEnemy3);
     part_particles_create(global.bloodBlueBigSystem, other.x, other.y, global.bloodBlueBig, 15);
     instance_destroy(self);
     global.bounty+=irandom_range(100,200);
@@ -203,7 +207,7 @@ if (hp&lt;1)
 if(sprite_index == yomicJump)
 {
     yVelo = -5
-    
+    audio_play_sound(yomicBoing, 0,false);
     image_index = 5;
     y-= 2
 }
