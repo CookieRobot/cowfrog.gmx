@@ -192,6 +192,7 @@ ded = 0;
 facing = -1;
 play = instance_find(player,0);
 grounded = true;
+changeSpriteWhenFalling = true; 
 //shooting
 //play = instance_find(player,0);
 nextShot = (room_speed*3)-(global.town);
@@ -229,7 +230,7 @@ bulletVelo = 1.5 +(global.town*.2);
 
 //gravity 
 //air 
-if (!grounded)
+if (!grounded &amp;&amp; changeSpriteWhenFalling)
 {
     image_index = 1;
 }
