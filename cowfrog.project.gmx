@@ -242,6 +242,21 @@
     <sprite>sprites\gubbsFly</sprite>
     <sprite>sprites\gubbsDed</sprite>
     <sprite>sprites\spr_empty</sprite>
+    <sprites name="hikagisHouse">
+      <sprite>sprites\House_4</sprite>
+      <sprite>sprites\HousePalette</sprite>
+      <sprite>sprites\Pillar</sprite>
+      <sprite>sprites\Posters</sprite>
+      <sprite>sprites\window</sprite>
+      <sprite>sprites\Crates</sprite>
+      <sprite>sprites\House_5</sprite>
+      <sprite>sprites\House_6</sprite>
+      <sprite>sprites\House_7</sprite>
+      <sprite>sprites\House_0</sprite>
+      <sprite>sprites\House_1</sprite>
+      <sprite>sprites\House_2</sprite>
+      <sprite>sprites\House_3</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background</background>
@@ -275,6 +290,14 @@
     <script>scripts\setBGM.gml</script>
     <script>scripts\random3Audio.gml</script>
   </scripts>
+  <shaders name="shaders">
+    <shader type="GLSLES">shaders\shader0.shader</shader>
+    <shader type="GLSLES">shaders\shader1.shader</shader>
+    <shader type="GLSLES">shaders\hikagiShader.shader</shader>
+    <shader type="GLSLES">shaders\shader0_new.shader</shader>
+    <shader type="GLSLES">shaders\shader1_new.shader</shader>
+    <shader type="GLSLES">shaders\hikagiShader_new.shader</shader>
+  </shaders>
   <fonts name="fonts">
     <font>fonts\font0</font>
     <font>fonts\font1</font>
