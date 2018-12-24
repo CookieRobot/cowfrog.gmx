@@ -25,7 +25,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//music 
+            <string>//load house data 
+var j = file_text_open_read("HouseGenerationInfo.json");
+data = ""
+
+while (!file_text_eof(j))
+{
+    
+    data += file_text_read_string(j);
+    file_text_readln(j);
+}
+file_text_close(j)
+print(data);
+global.map = json_decode(data);
+
+//music 
 global.BGM = noone;
 global.nextTrack = noone;
 //create font 

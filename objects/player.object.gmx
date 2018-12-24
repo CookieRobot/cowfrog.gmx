@@ -52,10 +52,10 @@ while space &gt;150
 safeHouse -=1;
 if space &gt; 270 //any house can be made at this size
 {
-    var newHouse =  instance_create(1920-space,80,house)
+    var newHouse =  instance_create(1920-space,162,house)
     //choose size
-    choice = irandom_range(0,1);
-    newHouse.size = choice;
+    choice = irandom_range(5,5);
+    newHouse.popCap = choice;
     switch(choice)
     {
         case 0:
@@ -66,27 +66,60 @@ if space &gt; 270 //any house can be made at this size
         case 1:
             newHouse.sprite_index =  size1House();
         break;
+        case 2:
+            newHouse.sprite_index =  size2House();
+        break;
+        case 3:
+            newHouse.sprite_index =  size3House();
+        break;
+        case 4:
+            newHouse.sprite_index =  size4House();
+        break;
+        case 5:
+            newHouse.sprite_index =  size5House();
+        break;
+        case 6:
+            newHouse.sprite_index =  size6House();
+        break;
+        case 7:
+            newHouse.sprite_index =  size7House();
+        break;
     }
     space = space- sprite_get_width(newHouse.sprite_index)
     newHouse.play = self;
+    
+    with(newHouse)
+        {
+            event_user(1);
+            
+        }
+    
     if safeHouse&lt;0
     {
         with(newHouse)
         {
+            
             event_user(0);
         }
     }
 }
 else 
 {
-    var newHouse = instance_create(1920-space,80,house);
-    newHouse.sprite_index = size0House();
+    var newHouse = instance_create(1920-space,162,house);
+    newHouse.sprite_index = size5House();
     space = space- sprite_get_width(newHouse.sprite_index)
     newHouse.play = self;
+    newHouse.popCap = 5;
+    with(newHouse)
+        {
+            event_user(1);
+            
+        }
     if safeHouse&lt;0
     {
         with(newHouse)
         {
+            
             event_user(0);
         }
     }

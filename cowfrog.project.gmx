@@ -3,7 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="2" name="datafiles">
+  <datafiles number="3" name="datafiles">
     <datafile>
       <name>Rye-Regular.ttf</name>
       <exists>-1</exists>
@@ -20,6 +20,23 @@
         </Config>
       </ConfigOptions>
       <filename>Rye-Regular.ttf</filename>
+    </datafile>
+    <datafile>
+      <name>HouseGenerationInfo.json</name>
+      <exists>-1</exists>
+      <size>1058</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>HouseGenerationInfo.json</filename>
     </datafile>
   </datafiles>
   <NewExtensions/>
@@ -243,19 +260,19 @@
     <sprite>sprites\gubbsDed</sprite>
     <sprite>sprites\spr_empty</sprite>
     <sprites name="hikagisHouse">
-      <sprite>sprites\House_4</sprite>
       <sprite>sprites\HousePalette</sprite>
       <sprite>sprites\Pillar</sprite>
       <sprite>sprites\Posters</sprite>
       <sprite>sprites\window</sprite>
       <sprite>sprites\Crates</sprite>
-      <sprite>sprites\House_5</sprite>
-      <sprite>sprites\House_6</sprite>
-      <sprite>sprites\House_7</sprite>
       <sprite>sprites\House_0</sprite>
       <sprite>sprites\House_1</sprite>
       <sprite>sprites\House_2</sprite>
       <sprite>sprites\House_3</sprite>
+      <sprite>sprites\House_4</sprite>
+      <sprite>sprites\House_5</sprite>
+      <sprite>sprites\House_7</sprite>
+      <sprite>sprites\House_6</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -274,6 +291,12 @@
     <script>scripts\randomHouse.gml</script>
     <script>scripts\size0House.gml</script>
     <script>scripts\size1House.gml</script>
+    <script>scripts\size2House.gml</script>
+    <script>scripts\size3House.gml</script>
+    <script>scripts\size4House.gml</script>
+    <script>scripts\size5House.gml</script>
+    <script>scripts\size6House.gml</script>
+    <script>scripts\size7House.gml</script>
     <script>scripts\gameOverMusic.gml</script>
     <script>scripts\collisionsIni.gml</script>
     <script>scripts\collisionsStep.gml</script>
@@ -288,15 +311,12 @@
     <script>scripts\displayTextSetUp.gml</script>
     <script>scripts\callShake.gml</script>
     <script>scripts\setBGM.gml</script>
+    <script>scripts\readList.gml</script>
     <script>scripts\random3Audio.gml</script>
+    <script>scripts\houseProps.gml</script>
   </scripts>
   <shaders name="shaders">
-    <shader type="GLSLES">shaders\shader0.shader</shader>
-    <shader type="GLSLES">shaders\shader1.shader</shader>
     <shader type="GLSLES">shaders\hikagiShader.shader</shader>
-    <shader type="GLSLES">shaders\shader0_new.shader</shader>
-    <shader type="GLSLES">shaders\shader1_new.shader</shader>
-    <shader type="GLSLES">shaders\hikagiShader_new.shader</shader>
   </shaders>
   <fonts name="fonts">
     <font>fonts\font0</font>
@@ -316,6 +336,7 @@
     <object>objects\titleCursor</object>
     <object>objects\scoreTracker</object>
     <object>objects\scale</object>
+    <object>objects\settings</object>
     <object>objects\parallax</object>
     <objects name="menus">
       <object>objects\menuManager</object>
@@ -328,7 +349,6 @@
       <object>objects\menuOptionsControls</object>
       <object>objects\menuDisplayText</object>
     </objects>
-    <object>objects\settings</object>
     <objects name="enemies">
       <object>objects\enemyshoot</object>
       <object>objects\explosion</object>
@@ -345,9 +365,11 @@
     <object>objects\restartRoom</object>
     <object>objects\fadeOut</object>
     <object>objects\gubbles</object>
+    <object>objects\testHouseGeneration</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title</room>
+    <room>rooms\room4</room>
     <room>rooms\optionsRoom</room>
     <room>rooms\game</room>
     <room>rooms\gameOver</room>

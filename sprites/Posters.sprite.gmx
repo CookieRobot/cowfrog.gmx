@@ -2,7 +2,7 @@
 <sprite>
   <type>0</type>
   <xorig>0</xorig>
-  <yorigin>0</yorigin>
+  <yorigin>24</yorigin>
   <colkind>1</colkind>
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
@@ -25,5 +25,6 @@
     <frame index="2">images\Posters_2.png</frame>
     <frame index="3">images\Posters_3.png</frame>
     <frame index="4">images\Posters_4.png</frame>
+    <frame index="5">images\Posters_5.png</frame>
   </frames>
 </sprite>

@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_xscale = -1;
+            <string>print("COWBOY SUMMON")
+image_xscale = -1;
 depth = -100;
 //sprites
 grav = .35;

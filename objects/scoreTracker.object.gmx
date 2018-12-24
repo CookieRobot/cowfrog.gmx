@@ -170,7 +170,7 @@ break;
 
 case 16:
 name = "Big Mamba"
-quote = "Wiggle your big toe."
+quote = "there's a snake in my boot please help."
 sprite = oraProfile
 color = make_color_rgb($f2,$88,$88)
 break;

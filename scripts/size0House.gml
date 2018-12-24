@@ -1,13 +1,8 @@
-choice = irandom_range(1,3)
+choice = irandom_range(1,1)
 switch(choice)
 {
 case 1:
-return house1;
+return House_0;
 break;
-case 2:
-return house2;
-break;
-case 3:
-return house3;
-break;
+
 }
