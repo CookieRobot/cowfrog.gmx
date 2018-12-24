@@ -63,6 +63,11 @@ windowChoice[0]=0;
 posterChoice[0]=0;
 crateChoice[0] =0;
 
+s_ind = shader_get_uniform(hikagiShader, "index"); 
+s_tex = shader_get_sampler_index(hikagiShader, "palTexture"); 
+
+indexValue = random(1.0); 
+palTex = sprite_get_texture(HousePalette, 0); 
 </string>
           </argument>
         </arguments>
@@ -485,7 +490,28 @@ stand.play = play;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
+            <string>
+shader_set(hikagiShader); 
+
+shader_set_uniform_f(s_ind, indexValue); 
+texture_set_stage(s_tex, palTex); 
+
+draw_self();
+
+for(i = 0; i&lt; windowCount;i++)
+{
+    array = windows[i]
+    draw_sprite(window,windowChoice[i],x+array[0]*8,y-array[1]*8)
+}
+for(i = 0; i&lt; pillarCount;i++)
+{
+    array = pillars[i]
+    draw_sprite(Pillar,0,x+array[0]*8,y-array[1]*8)
+}
+
+shader_reset(); 
+
+
 //addX = sprite_get_width(sprite_index)*(16/24)
 //addY = -sprite_get_height(sprite_index)*(5/20)
 for(i = 0; i&lt; posterCount;i++)
@@ -498,16 +524,7 @@ for(i = 0; i&lt; crateCount;i++)
     array = crates[i]
     draw_sprite(Crates,crateChoice[i],x+array[0]*8,y-array[1]*8)
 }
-for(i = 0; i&lt; windowCount;i++)
-{
-    array = windows[i]
-    draw_sprite(window,windowChoice[i],x+array[0]*8,y-array[1]*8)
-}
-for(i = 0; i&lt; pillarCount;i++)
-{
-    array = pillars[i]
-    draw_sprite(Pillar,0,x+array[0]*8,y-array[1]*8)
-}
+
 
 //draw_sprite(Posters,0,x+16*8,y-5*8)
 //draw_sprite(window,0,x+10*8,y-12*8)
