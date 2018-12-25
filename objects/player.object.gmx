@@ -40,7 +40,20 @@ if s == noone
 {
 s = instance_create(0,0,scoreTracker);
 }
-setBGM(Angry_frog_from_the_east);
+if (global.town%4==1)
+{
+    i = irandom_range(0,1)
+    switch(i)
+    {
+        case 0:
+        setBGM(Angry_frog_from_the_east);
+        break;
+        case 1:
+        setBGM(frog_in_f);
+        break;
+    }
+}
+
 
 draw_set_colour(c_black);
 draw_set_halign(fa_center);
@@ -903,10 +916,18 @@ if pressPause
     print("pausing");
     //reset input
     inputBooleans();
+    part_system_automatic_update(global.smokeSystem,false)
+    part_system_automatic_update(global.bloodSystem,false)
+    part_system_automatic_update(global.woodchipSystem,false)
+    part_system_automatic_update(global.woodChunk1System,false)
+    part_system_automatic_update(global.woodChunk2System,false)
+    part_system_automatic_update(global.bloodBlueSystem,false)
+    part_system_automatic_update(global.bloodBlueBigSystem,false)
     with(control)
     {
         x = view_xview[0]+8
         paused = true;
+        pauseSurface = sprite_create_from_surface(application_surface,view_xport,view_yport,view_wport,view_hport,0,0,0,0);
         instance_deactivate_all(1);
     }
 }

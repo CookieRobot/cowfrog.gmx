@@ -189,6 +189,32 @@ sprite = pkbtProfile
 color = make_color_rgb($f1,$c4,$0f)
 break;
 
+case 19:
+name = "Name:Kenju"
+quote = "Mind your own hoppin' business."
+sprite = knjProfile
+color = c_red
+break;
+
+case 20:
+name = "KV"
+    switch(global.bounty%3)
+    {
+        case 0:
+        quote = "Now you're sleeping with the fishes."
+        break;
+        case 1:
+        quote = "Looks like I got the catch of the day."
+        break;
+        case 2:
+        quote = "Crime is illegal, fucko."
+        break;
+    }
+
+sprite = kindvirusProfile
+color = make_color_rgb($68,$9a,$56)
+break;
+
 case 1000:
 name = "BIG Yomic"
 quote = "Looks like you were a little too slow pardner!"

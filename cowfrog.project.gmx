@@ -63,6 +63,7 @@
     <sound>sound\frogYeehaw</sound>
     <sound>sound\gunShotGarb</sound>
     <sound>sound\gunshot1</sound>
+    <sound>sound\frog_in_f</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="cowboys">
@@ -274,6 +275,22 @@
       <sprite>sprites\House_7</sprite>
       <sprite>sprites\House_6</sprite>
     </sprites>
+    <sprites name="knj">
+      <sprite>sprites\knjGunD</sprite>
+      <sprite>sprites\knjGunF</sprite>
+      <sprite>sprites\knjGunT</sprite>
+      <sprite>sprites\knjToss</sprite>
+      <sprite>sprites\knjProfile</sprite>
+      <sprite>sprites\knjDed</sprite>
+    </sprites>
+    <sprites name="kindvirus">
+      <sprite>sprites\kindvirusProfile</sprite>
+      <sprite>sprites\kindvirusToss</sprite>
+      <sprite>sprites\kindvirusDed</sprite>
+      <sprite>sprites\kindvirusGunD</sprite>
+      <sprite>sprites\kindvirusGunF</sprite>
+      <sprite>sprites\kindvirusGunT</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background</background>
@@ -317,6 +334,7 @@
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\hikagiShader.shader</shader>
+    <shader type="GLSLES">shaders\palletteSwap.shader</shader>
   </shaders>
   <fonts name="fonts">
     <font>fonts\font0</font>

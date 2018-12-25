@@ -25,7 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//load house data 
+            <string>//pausing 
+pauseSurface = noone;
+
+//load house data 
 var j = file_text_open_read("HouseGenerationInfo.json");
 data = ""
 
@@ -305,7 +308,15 @@ if paused
         }
         else
         {
+            sprite_delete(pauseSurface);
             instance_activate_all();
+            part_system_automatic_update(global.smokeSystem,true)
+            part_system_automatic_update(global.bloodSystem,true)
+            part_system_automatic_update(global.woodchipSystem,true)
+            part_system_automatic_update(global.woodChunk1System,true)
+            part_system_automatic_update(global.woodChunk2System,true)
+            part_system_automatic_update(global.bloodBlueSystem,true)
+            part_system_automatic_update(global.bloodBlueBigSystem,true)
         }
     }
     exit;
@@ -403,9 +414,14 @@ alarm[1] = 10;
             <kind>1</kind>
             <string>if paused
 {
-
+//draw_sprite_ext(pauseSurface,0,x,y);
+draw_sprite_ext(pauseSurface,0,view_xview[0],view_yview[0],1,1,0,c_white,1);
 draw_set_color(c_white);
-draw_rectangle(view_xview[0],view_yview[0]+64,view_xview[0]+240,view_xview[0]+96,false);
+draw_rectangle(
+view_xview[0],
+view_yview[0]+66,
+view_xview[0]+240,
+view_yview[0]+90,false);
 draw_set_color(c_black);
 draw_text(view_xview[0]+60,view_yview[0]+70,"Continue");
 draw_text(view_xview[0]+188,view_yview[0]+70,"Title");

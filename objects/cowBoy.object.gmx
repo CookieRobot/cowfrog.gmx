@@ -185,6 +185,22 @@ switch(choice)
         throw =pkbtGunT;
         toss = pkbtToss;
     break;
+    case 19:
+        sprite_index = knjProfile
+        dead = knjDed
+        down = knjGunD
+        forward =knjGunF;
+        throw =knjGunT;
+        toss = knjToss;
+    break;
+    case 20:
+        sprite_index = kindvirusProfile
+        dead = kindvirusDed
+        down = kindvirusGunD
+        forward =kindvirusGunF;
+        throw =kindvirusGunT;
+        toss = kindvirusToss;
+    break;
 
 }
 xVelo = 0;

@@ -37,6 +37,9 @@ while (!file_text_eof(j))
 file_text_close(j)
 print(data);
 global.map = json_decode(data);
+//var palTex = sprite_get_texture(HousePalette, 0); 
+
+
 
 print("data found")
 /*
@@ -251,7 +254,13 @@ houseProps(sprite_get_name(sprite_index));
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
+            <string>shader_set(hikagiShader); 
+
+shader_set_uniform_f(shader_get_uniform(hikagiShader, "index"), 1); 
+var s_tex = shader_get_sampler_index(hikagiShader, "palTexture"); 
+texture_set_stage(s_tex, sprite_get_texture(HousePalette, 0)); 
+draw_self();
+shader_reset();
 //addX = sprite_get_width(sprite_index)*(16/24)
 //addY = -sprite_get_height(sprite_index)*(5/20)
 for(i = 0; i&lt; posterCount;i++)
