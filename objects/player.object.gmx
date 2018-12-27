@@ -401,6 +401,10 @@ if pressFireChange
         recentFire = 0;
         var bullet = instance_create(x,y,playerShot);
         --clip;
+        if (clip == 0)
+        {
+            audio_play_sound(gunShotGarb,0,false);
+        }
         //print("shoot")
         if pressUp
         {
