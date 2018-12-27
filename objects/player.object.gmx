@@ -60,6 +60,7 @@ draw_set_halign(fa_center);
 print("generating houses");
 space = 1920;
 safeHouse = 2;
+lastHouse = -1;
 while space &gt;150
 {
 safeHouse -=1;
@@ -67,7 +68,13 @@ if space &gt; 270 //any house can be made at this size
 {
     var newHouse =  instance_create(1920-space,162,house)
     //choose size
-    choice = irandom_range(5,5);
+    choice = irandom_range(0   ,7);
+    //preventsame house from appearing too much
+    while (choice == lastHouse)
+    {
+         choice = irandom_range(0   ,7);
+    }
+    lastHouse = choice;
     newHouse.popCap = choice;
     switch(choice)
     {

@@ -90,7 +90,11 @@ palTex = sprite_get_texture(HousePalette, 0);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>windowHeight = 60;
+if popCap == 7
+{
+    windowHeight = 68;
+}
 instance_create(jumpBoyLocation[jumpBoysSpawned],60,jumpBoy)
 jumpBoysSpawned+=1;
 /*for (i=0;i&lt;windowCount;i++)
@@ -133,6 +137,7 @@ jumpBoysSpawned+=1;
 groundCount = 0;
 windowsUsed = 0;
 firstWindow = 0;
+windowHeight = 60;
 gap = 0;
 switch(popCap)
 {
@@ -152,8 +157,8 @@ switch(popCap)
     break;
     
     case 3:
-    firstWindow = 0;
-    gap = 0;
+    firstWindow = 61;
+    gap = 54;
     break;
     
     case 4:
@@ -168,12 +173,14 @@ switch(popCap)
     
     case 6:
     firstWindow = 73;
-    gap = 0;
+    gap = 54;
+    windowHeight = 68;
     break;
     
     case 7:
-    firstWindow = 0;
+    firstWindow = 61;
     gap = 0;
+    
     break;
 
 
@@ -206,7 +213,7 @@ while bigYomicCount&gt;0
 }
 while dynaBoys&gt;0
 {
-    instance_create(x+firstWindow+windowsUsed*gap,60,dynaBoy);
+    instance_create(x+firstWindow+windowsUsed*gap,windowHeight,dynaBoy);
     
     //draw open window
     windowChoice[windowsUsed] =0;
@@ -232,7 +239,7 @@ while jumpBoys&gt;0
 
 while snipeBoys&gt;0
 {
-    instance_create(x+firstWindow+windowsUsed *gap,60,snipeBoy);
+    instance_create(x+firstWindow+windowsUsed *gap,windowHeight,snipeBoy);
     
     //draw open window
     windowChoice[windowsUsed] =0;
@@ -321,9 +328,9 @@ switch(popCap)
     maxBoys = 7;
     break;
     case 3:
-    maxCowboys = 3
+    maxCowboys = 4
     maxWindowboys = 0
-    maxBoys = 3;
+    maxBoys = 4;
     break;
     case 4:
     maxCowboys = 4
@@ -336,21 +343,21 @@ switch(popCap)
     maxBoys = 5;
     break;
     case 6:
-    maxCowboys = 3
+    maxCowboys = 4
     maxWindowboys = 1
-    maxBoys = 4;
+    maxBoys = 5;
     break;
     case 7:
-    maxCowboys = 3
+    maxCowboys = 4
     maxWindowboys = 0
-    maxBoys = 3;
+    maxBoys = 4;
     break;
 
 
 }
 print("maxBoys");
 print(maxBoys);
-cowboyCount = irandom_range(2,maxBoys-3)
+cowboyCount = irandom_range(2,maxBoys-2)
 cowboyCount-= 1-floor(global.town*.25)
 if(cowboyCount&gt; maxBoys)
 {
