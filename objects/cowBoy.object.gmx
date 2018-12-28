@@ -38,7 +38,7 @@ down = 0
 forward =0;
 throw =0;
 toss = 0;
-choice = irandom_range(1,18)
+choice = irandom_range(1,20)
 switch(choice)
 {
     case 1:
