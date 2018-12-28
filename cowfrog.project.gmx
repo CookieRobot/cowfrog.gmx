@@ -64,6 +64,8 @@
     <sound>sound\gunShotGarb</sound>
     <sound>sound\gunshot1</sound>
     <sound>sound\frog_in_f</sound>
+    <sound>sound\Kill_Em_All_Froggo</sound>
+    <sound>sound\Frogs_On_Parade</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="cowboys">

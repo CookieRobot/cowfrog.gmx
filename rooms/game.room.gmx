@@ -20,7 +20,7 @@ if s != noone
 instance_create(0,0,fadeOut);
 
 //YEEEEEE HAAAAAWWW
-i = irandom_range(0,2)
+i = irandom_range(0,3)
 a = noone
 switch (i)
 {
@@ -33,6 +33,7 @@ break;
 case 2:
 a = frog_fx
 break;
+
 }
 audio_play_sound(a, 1, false);</code>
   <enableViews>-1</enableViews>
